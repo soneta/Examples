@@ -1,4 +1,4 @@
-﻿Example 4
+###Example 4###
 -----------------------------------------------------------------------------------------------------
 
 Przykład pokazuje implementacje własnej klasy, nie powiązanej z logiką enova365. Dla zaimplementowanej 
@@ -11,7 +11,9 @@ Na liście pokazane zostało użycie zaimplementowanej metody extender'a, która
 Druga z metod zastosowanych na definicji listy pokazuje możliwość ściągnięcia pliku xml, zawierającego
 dane przygotowane po stronie serwera.
 
-Extender\CfgWalutyNbpExtender.csDzienneKursyWalutNbp.cs	- przykładowan klasa implementująca dane oraz metody
-Extender\KursWalutyNbp.cs								- klasa implemenująca pojedynczy wiersz wyświetlany 
-														  na liście zdefiniowanej na zakładce.
-UI\DzienneKursyWalutNbp.Ogolne.pageform.xml				- definicja własnej zakładki powiązanej z własnyą klasą	
+* Extender\CfgWalutyNbpExtender.csDzienneKursyWalutNbp.cs
+Przykładowan klasa implementująca dane oraz metody
+* Extender\KursWalutyNbp.cs
+Klasa implemenująca pojedynczy wiersz wyświetlany na liście zdefiniowanej na zakładce.
+* UI\DzienneKursyWalutNbp.Ogolne.pageform.xml
+Definicja własnej zakładki powiązanej z własnyą klasą	
