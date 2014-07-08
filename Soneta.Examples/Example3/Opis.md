@@ -1,4 +1,4 @@
-﻿Example 3
+###Example 3###
 -----------------------------------------------------------------------------------------------------
 
 Przykład pokazuje możliwość podpięcia własnej zakładki konfiguracyjnej dla potrzeb własnego dodatku.
@@ -8,6 +8,8 @@ bez stosowania pliku config.xml
 W wyniku zastosowania dodatku, powinna pojawić się dodatkowa zakładka w ustawieniach w sekcji o nazwie 
 Soneta.Examples.
 
-Extender\CfgWalutyNbpExtender.cs				- przykładowan klasa implementująca ustawienia 
-												  konfiguracyjne wykorzystane na dodatkowej zakładce 
-UI\Config.CfgWalutyNbpExtender.pageform.xml		- definicja zakładki konfiguracyjnej
+* Extender\CfgWalutyNbpExtender.cs
+Przykładowan klasa implementująca ustawienia konfiguracyjne wykorzystane na dodatkowej zakładce 
+* UI\Config.CfgWalutyNbpExtender.pageform.xml
+Definicja zakładki konfiguracyjnej
+
