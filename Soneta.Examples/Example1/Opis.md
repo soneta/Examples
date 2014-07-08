@@ -1,4 +1,4 @@
-﻿Example 1
+﻿###Example 1###
 -----------------------------------------------------------------------------------------------------
 
 Przykład pokazuje możliwość zastosowania własnej listy w oparciu o istniejące obiekty enova. 
@@ -8,7 +8,10 @@ w postaci struktury pageform.xml.
 W wyniku zastosowania dodatku, powinna pojawić się dodatkowa grupa w menu głównym programu o nazwie 
 Soneta.Examples z opcją "Towary własne", po wybraniu której pojawi się zaimplementowana lista.
 
-Extender\TowaryUlubioneKontaktuViewInfo.cs			- przykładowan klasa z implementacją View zbudowanego 
-													  na bazie tabel enova.
-Extender\Menu.cs									- rejestracja listy dla View
-UI\TowaryUlubioneKontaktu.viewform.xml				- definicja page'a dla View
+* Extender\TowaryUlubioneKontaktuViewInfo.cs
+    Przykładowan klasa z implementacją View zbudowanego na bazie tabel enova.
+* Extender\Menu.cs
+    Rejestracja listy dla View
+* UI\TowaryUlubioneKontaktu.viewform.xml
+    Definicja page'a dla View
+    
