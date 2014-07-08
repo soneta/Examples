@@ -19,7 +19,7 @@ zakładki wprowadzone zostało dodatkowe pole wyświetlające logo kontrahenta. 
 się pojawiło konieczne jest wstawienie kontrahentowi załącznika o nazwie *logo.png*.
  
     W wyniku zastosowania dodatku, powinna pojawić się dodatkowa zakładka na formularzu
-kontrahenta, któa oprócz danych standardowych zakładki ogólnej będzie posiadała również
+kontrahenta, która oprócz danych standardowych zakładki ogólnej będzie posiadała również
 logo kontrahenta.
 
 * ***Example3*** 
