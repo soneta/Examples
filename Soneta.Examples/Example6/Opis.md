@@ -7,4 +7,5 @@ W wyniku zastosowania dodatku, w menu czynności na liście kontrahentów powinn
 sekcja o nazwie Soneta.Examples, która zawiera 4 różne akcje zaimplementowane w przykładzie.
 
 * Extender\ExampleWorker.cs
-Przykładowa klasa extender'a implementująca czynności z zastosowaniem różnych rezultatów.
+
+    Przykładowa klasa extender'a implementująca czynności z zastosowaniem różnych rezultatów.
