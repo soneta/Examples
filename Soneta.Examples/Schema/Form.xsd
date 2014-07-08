@@ -1,0 +1,514 @@
+﻿<xs:schema
+    xmlns:xs='http://www.w3.org/2001/XMLSchema'
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    targetNamespace='http://www.enova.pl/schema/form.xsd'
+    xmlns='http://www.enova.pl/schema/form.xsd'
+    elementFormDefault='qualified'>
+
+  <xs:element name="DataForm">
+    <xs:complexType>
+      <xs:choice minOccurs="1" maxOccurs="unbounded">
+        <xs:element name="Stack" type="containerElement" maxOccurs="unbounded" />
+        <xs:element name="Include" type="includeElement" maxOccurs="unbounded" />
+        <xs:element name="Group" type="containerElement" maxOccurs="unbounded" />
+        <xs:element name="Page" type="pageElement" maxOccurs="unbounded" />
+        <xs:element name="Grid" type="gridElement" maxOccurs="unbounded" />
+        <xs:element name="Scheduler" type="schedulerElement" maxOccurs="unbounded" />
+        <xs:element name="Diagram" type="diagramElement" maxOccurs="unbounded" />
+        <xs:element name="Pivot" type="pivotElement" maxOccurs="unbounded" />
+        <xs:element name="Chart" type="chartElement" maxOccurs="unbounded" />
+        <xs:element name="List" type="gridElement" maxOccurs="unbounded" />
+        <xs:element name="Flow" type="flowElement" maxOccurs="unbounded" />
+        <xs:element name="Row" type="containerElement" maxOccurs="unbounded" />
+        <xs:element name="Bar" type="containerElement" maxOccurs="unbounded" />
+        <xs:element name="Field" type="fieldElement" maxOccurs="unbounded" />
+        <xs:element name="Image" type="uiElement" maxOccurs="unbounded" />
+        <xs:element name="Label" type="uiElement" maxOccurs="unbounded" />
+        <xs:element name="Data" type="dataElement" maxOccurs="unbounded" />
+        <xs:element name="Gap" type="uiElement" maxOccurs="unbounded" />
+        <xs:element name="Html" type="uiElement" maxOccurs="unbounded" />
+        <xs:element name="Command" type="commandElement" maxOccurs="unbounded" />
+        <xs:element name="UserControl" type="userControlElement" maxOccurs="unbounded" />
+        <!--<xs:element name="Tile" type="commandElement" maxOccurs="unbounded" />-->
+        <!--<xs:element name="CommandsGroup" type="commandsGroupElement" maxOccurs="unbounded" />-->
+        <xs:element name="Template" type="templateElement" maxOccurs="unbounded" />
+      </xs:choice>
+      <xs:attribute name="Priority" type="xs:int" use="optional" default="100" />
+      <xs:attribute name="Contexts" type="xs:string" use="optional" />
+      <xs:attribute name="ViewType" type="enumDataFormView" use="optional" />
+      <xs:attribute name="Target" type="enumDataFormTarget" use="optional" />
+      <xs:attribute name="RightName" type="xs:string" use="optional" />
+      <xs:attribute name="ResourceName" type="xs:string" use="optional" />
+      <xs:attribute name="DataType" type="xs:string" use="optional" />
+      <xs:attribute name="ValidateLanguage" type="enumDataFormValidateLanguage" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="containerElement">
+    <xs:complexContent>
+      <xs:extension base="uiElement">
+        <xs:sequence minOccurs="0">
+          <xs:choice maxOccurs="unbounded">
+            <xs:element name="Stack" type="containerElement" maxOccurs="unbounded" />
+            <xs:element name="Include" type="includeElement" maxOccurs="unbounded" />
+            <xs:element name="Group" type="containerElement" maxOccurs="unbounded" />
+            <xs:element name="Page" type="pageElement" maxOccurs="unbounded" />
+            <xs:element name="Grid" type="gridElement" maxOccurs="unbounded" />
+            <xs:element name="Scheduler" type="schedulerElement" maxOccurs="unbounded" />
+            <xs:element name="Diagram" type="diagramElement" maxOccurs="unbounded" />
+            <xs:element name="Pivot" type="pivotElement" maxOccurs="unbounded" />
+            <xs:element name="Chart" type="chartElement" maxOccurs="unbounded" />
+            <xs:element name="List" type="gridElement" maxOccurs="unbounded" />
+            <xs:element name="Flow" type="flowElement" maxOccurs="unbounded" />
+            <xs:element name="Row" type="containerElement" maxOccurs="unbounded" />
+            <xs:element name="Bar" type="containerElement" maxOccurs="unbounded" />
+            <xs:element name="Field" type="fieldElement" maxOccurs="unbounded" />
+            <xs:element name="Image" type="uiElement" maxOccurs="unbounded" />
+            <xs:element name="Label" type="uiElement" maxOccurs="unbounded" />
+            <xs:element name="Data" type="dataElement" maxOccurs="unbounded" />
+            <xs:element name="Gap" type="uiElement" maxOccurs="unbounded" />
+            <xs:element name="Html" type="uiElement" maxOccurs="unbounded" />
+            <xs:element name="Command" type="commandElement" maxOccurs="unbounded" />
+            <xs:element name="UserControl" type="userControlElement" maxOccurs="unbounded" />
+            <!--<xs:element name="Tile" type="commandElement" maxOccurs="unbounded" />-->
+            <!--<xs:element name="CommandsGroup" type="commandsGroupElement" maxOccurs="unbounded" />-->
+            <xs:element name="Template" type="templateElement" maxOccurs="unbounded" />
+          </xs:choice>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="templateElement">
+    <xs:complexContent>
+      <xs:extension base="uiElement">
+        <xs:choice minOccurs="1" maxOccurs="1">
+          <xs:element name="Stack" type="containerElement" maxOccurs="unbounded" />
+          <xs:element name="Include" type="includeElement" maxOccurs="unbounded" />
+          <xs:element name="Group" type="containerElement" maxOccurs="unbounded" />
+          <xs:element name="Page" type="pageElement" maxOccurs="unbounded" />
+          <xs:element name="Grid" type="gridElement" maxOccurs="unbounded" />
+          <xs:element name="Scheduler" type="schedulerElement" maxOccurs="unbounded" />
+          <xs:element name="Diagram" type="diagramElement" maxOccurs="unbounded" />
+          <xs:element name="Pivot" type="pivotElement" maxOccurs="unbounded" />
+          <xs:element name="Chart" type="chartElement" maxOccurs="unbounded" />
+          <xs:element name="List" type="gridElement" maxOccurs="unbounded" />
+          <xs:element name="Flow" type="flowElement" maxOccurs="unbounded" />
+          <xs:element name="Row" type="containerElement" maxOccurs="unbounded" />
+          <xs:element name="Bar" type="containerElement" maxOccurs="unbounded" />
+          <xs:element name="Field" type="fieldElement" maxOccurs="unbounded" />
+          <xs:element name="Image" type="uiElement" maxOccurs="unbounded" />
+          <xs:element name="Label" type="uiElement" maxOccurs="unbounded" />
+          <xs:element name="Data" type="dataElement" maxOccurs="unbounded" />
+          <xs:element name="Gap" type="uiElement" maxOccurs="unbounded" />
+          <xs:element name="Html" type="uiElement" maxOccurs="unbounded" />
+          <xs:element name="Command" type="commandElement" maxOccurs="unbounded" />
+          <xs:element name="UserControl" type="userControlElement" maxOccurs="unbounded" />
+          <!--<xs:element name="Tile" type="commandElement" maxOccurs="unbounded" />-->
+          <!--<xs:element name="CommandsGroup" type="commandsGroupElement" maxOccurs="unbounded" />-->
+          <xs:element name="Template" type="templateElement" maxOccurs="unbounded" />
+        </xs:choice>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="flowElement">
+    <xs:complexContent>
+      <xs:extension base="containerElement">
+        <xs:attribute name="Align" type="xs:boolean" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="pageElement">
+    <xs:complexContent>
+      <xs:extension base="containerElement">
+        <xs:attribute name="Key" type="xs:string" use="optional" />
+        <xs:attribute name="MultiDataSource" type="xs:string" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="includeElement">
+    <xs:complexContent>
+      <xs:extension base="containerElement">
+        <xs:attribute name="Source" type="xs:string" use="required" />
+        <xs:attribute name="Suffix" type="xs:string" use="optional" />
+        <xs:attribute name="Path" type="xs:string" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="fieldElement">
+    <xs:complexContent>
+      <xs:extension base="uiElement">
+        <!--<xs:choice minOccurs="0" maxOccurs="1">
+          <xs:element name="ExtenderJS" type="extenderJsElement" />
+        </xs:choice>-->
+        <xs:attribute name="Format" type="xs:string" use="optional" />
+        <xs:attribute name="CheckedValue" type="xs:string" use="optional" />
+        <xs:attribute name="Footer" type="enumColumnFooter" use="optional" />
+        <xs:attribute name="Important" type="xs:boolean" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!--<xs:complexType name="extenderJsElement">
+    <xs:attribute name="Type" type="xs:string" use="required" />
+  </xs:complexType>-->
+
+  <xs:complexType name="collectionElement">
+    <xs:complexContent>
+      <xs:extension base="uiElement">
+        <xs:sequence minOccurs="0">
+          <xs:choice maxOccurs="unbounded">
+            <xs:element name="Field" type="fieldElement" maxOccurs="unbounded" />
+            <xs:element name="Flow" type="flowElement" />
+            <xs:element name="GroupBy" type="groupByElement" maxOccurs="unbounded" />
+            <xs:element name="Axis" type="axisElement" maxOccurs="unbounded" />
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="SelectedValue" type="xs:string" use="optional" />
+        <xs:attribute name="FocusedValue" type="xs:string" use="optional" />
+        <xs:attribute name="OrderBy" type="xs:string" use="optional" />
+        <xs:attribute name="Filter" type="xs:string" use="optional" />
+        <xs:attribute name="IsToolbarVisible" type="xs:boolean" use="optional" />
+        <xs:attribute name="IsFilterRowVisible" type="xs:boolean" use="optional" />
+        <xs:attribute name="FilterPanelWidth" type="xs:string" use="optional" />
+        <xs:attribute name="VisibleFeatures" type="xs:string" use="optional" />
+        <xs:attribute name="EditInPlace" type="xs:boolean" use="optional" />
+        <xs:attribute name="NewInPlace" type="xs:boolean" use="optional" />
+        <xs:attribute name="AlwaysAddNewRow" type="xs:boolean" use="optional" />
+        <xs:attribute name="PreventNewRowOnFocus" type="xs:boolean" use="optional" />
+        <xs:attribute name="OpenMethodName" type="xs:string" use="optional" />
+        <xs:attribute name="IsSmartOpen" type="xs:string" use="optional" />
+        <xs:attribute name="NewButton" type="enumCollectionButtonState" use="optional" />
+        <xs:attribute name="EditButton" type="enumCollectionButtonState" use="optional" />
+        <xs:attribute name="UpdateButton" type="enumCollectionButtonState" use="optional" />
+        <xs:attribute name="RemoveButton" type="enumCollectionButtonState" use="optional" />
+        <xs:attribute name="SearchButton" type="enumCollectionButtonState" use="optional" />
+        <xs:attribute name="SumType" type="enumCollectionSumType" use="optional" />
+        <xs:attribute name="ActionsMode" type="enumActionsMode" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="dataElement">
+    <xs:sequence minOccurs="0">
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Data" type="dataElement" maxOccurs="unbounded" />
+        <xs:element name="Binary" type="xs:short" maxOccurs="unbounded" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" use="required" />
+    <xs:attribute name="Value" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="gridUserFilter">
+    <xs:attribute name="Value" type="xs:string" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="gridElement">
+    <xs:complexContent>
+      <xs:extension base="collectionElement">
+        <xs:sequence minOccurs="0">
+          <xs:choice maxOccurs="unbounded">
+            <xs:element name="Data" type="dataElement" />
+            <xs:element name="UserFilter" type="gridUserFilter" />
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="ResourceName" type="xs:string" use="optional" />
+        <xs:attribute name="TreeNodesValue" type="xs:string" use="optional" />
+        <xs:attribute name="TreeExpandingLevel" type="enumTreeExpandingLevel" use="optional" />
+        <xs:attribute name="FocusedColumnValue" type="xs:string" use="optional" />
+        <xs:attribute name="IsHeaderVisible" type="xs:boolean" use="optional" />
+        <xs:attribute name="KeepsSequence" type="xs:boolean" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="schedulerElement">
+    <xs:complexContent>
+      <xs:extension base="collectionElement">
+        <xs:attribute name="View" type="enumSchedulerViews" use="optional" />
+        <xs:attribute name="AllowViewChanging" type="xs:boolean" use="optional" />
+        <xs:attribute name="SelectedInterval" type="xs:string" use="optional" />
+        <xs:attribute name="VisibleInterval" type="xs:string" use="optional" />
+        <xs:attribute name="Resources" type="xs:string" use="optional" />
+        <xs:attribute name="SelectedResource" type="xs:string" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="diagramElement">
+    <xs:complexContent>
+      <xs:extension base="collectionElement">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="pivotElement">
+    <xs:complexContent>
+      <xs:extension base="collectionElement">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="chartElement">
+    <xs:complexContent>
+      <xs:extension base="collectionElement">
+        <xs:attribute name="Type" type="enumChartType" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="axisElement">
+    <xs:complexContent>
+      <xs:extension base="uiElement">
+        <xs:attribute name="Direction" type="enumPivotDirection" use="required" />
+        <xs:attribute name="Dimension" type="enumPivotDimension" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="commandElement">
+    <xs:complexContent>
+      <xs:extension base="uiElement">
+        <xs:attribute name="MethodName" type="xs:string" use="optional" />
+        <xs:attribute name="MoreMethodName" type="xs:string" use="optional" />
+        <xs:attribute name="Script" type="xs:string" use="optional" />
+        <xs:attribute name="Icon" type="xs:string" use="optional" />
+        <xs:attribute name="Key" type="xs:string" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="userControlElement">
+    <xs:complexContent>
+      <xs:extension base="uiElement">
+        <xs:sequence minOccurs="0">
+          <xs:choice maxOccurs="unbounded">
+            <xs:element name="Data" type="dataElement" maxOccurs="unbounded" />
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="TypeName" type="xs:string" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="groupByElement">
+    <xs:complexContent>
+      <xs:extension base="uiElement">
+        <xs:attribute name="IsDescending" type="xs:boolean" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="uiElement">
+    <xs:attribute name="DataContext" type="xs:string" use="optional" />
+    <xs:attribute name="EditValue" type="xs:string" use="optional" />
+    <xs:attribute name="Name" type="xs:string" use="optional" />
+    <xs:attribute name="CaptionHtml" type="xs:string" use="optional" />
+    <xs:attribute name="DescriptionHtml" type="xs:string" use="optional" />
+    <xs:attribute name="Class" use="optional">
+      <xs:simpleType>
+        <xs:list itemType="enumSingleClass" />
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="Width" type="xs:string" use="optional" />
+    <xs:attribute name="Height" type="xs:string" use="optional" />
+    <xs:attribute name="OuterWidth" type="xs:string" use="optional" />
+    <xs:attribute name="OuterHeight" type="xs:string" use="optional" />
+    <xs:attribute name="LabelWidth" type="xs:string" use="optional" />
+    <xs:attribute name="LabelHeight" type="xs:string" use="optional" />
+    <xs:attribute name="Visibility" type="xs:string" use="optional" />
+    <xs:attribute name="IsReadOnly" type="xs:string" use="optional" />
+    <xs:attribute name="Tag" type="xs:string" use="optional" />
+    <xs:attribute name="TagInfo" type="xs:string" use="optional" />
+    <xs:attribute name="Priority" type="xs:integer" use="optional" />
+  </xs:complexType>
+
+  <!-- ENUMS -->
+
+  <xs:simpleType name="enumDataFormView">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Dialog" />
+      <xs:enumeration value="Form" />
+      <xs:enumeration value="Folder" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="enumDataFormTarget">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Child" />
+      <xs:enumeration value="NewFrame" />
+      <xs:enumeration value="CloseCurrent" />
+      <xs:enumeration value="Popup" />
+      <xs:enumeration value="ComboBox" />
+      <xs:enumeration value="Modal" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="enumCollectionButtonState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Auto" />
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Visible" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="enumColumnFooter">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Auto" />
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Sum" />
+      <xs:enumeration value="Count" />
+      <xs:enumeration value="Average" />
+      <xs:enumeration value="Min" />
+      <xs:enumeration value="Max" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="enumCollectionSumType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Selected" />
+      <xs:enumeration value="All" />
+      <xs:enumeration value="Groups" />
+      <xs:enumeration value="GroupsNewLine" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="enumDataFormValidateLanguage">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Requiered" />
+      <xs:enumeration value="Manual" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="enumTreeExpandingLevel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Collapsed" />
+      <xs:enumeration value="ExpandRoot" />
+      <xs:enumeration value="ExpandAll" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="enumSchedulerViews">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Daily" />
+      <xs:enumeration value="WorkWeek" />
+      <xs:enumeration value="Weekly" />
+      <xs:enumeration value="Monthly" />
+      <xs:enumeration value="HoursTimeLine" />
+      <xs:enumeration value="DaysTimeLine" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="enumPivotDirection">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="X" />
+      <xs:enumeration value="Y" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="enumPivotDimension">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Enum" />
+      <xs:enumeration value="AZ" />
+      <xs:enumeration value="WeekByDays" />
+      <xs:enumeration value="MonthByDays" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="enumActionsMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FormAndControl" />
+      <xs:enumeration value="Control" />
+      <xs:enumeration value="Form" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="enumChartType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Line" />
+      <xs:enumeration value="Bar" />
+      <xs:enumeration value="Pie" />
+      <xs:enumeration value="Donate" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="enumSingleClass">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Collapsable" />
+      <xs:enumeration value="Expandable" />
+      <xs:enumeration value="Dialog" />
+      <xs:enumeration value="NoSave" />
+      <xs:enumeration value="Information" />
+      <xs:enumeration value="Question" />
+      <xs:enumeration value="MainPage" />
+      <xs:enumeration value="Menu" />
+      <xs:enumeration value="DataBar" />
+      <xs:enumeration value="PreviewLine" />
+      <xs:enumeration value="FirstResponder" />
+      <xs:enumeration value="SmartOpen" />
+      <xs:enumeration value="Header" />
+      <xs:enumeration value="Panel" />
+      <xs:enumeration value="PanelItem" />
+      <xs:enumeration value="PanelWinItem" />
+      <xs:enumeration value="NoLayout" />
+      <xs:enumeration value="GroupItem" />
+      <xs:enumeration value="Reverse" />
+      <xs:enumeration value="PrintButton" />
+      <xs:enumeration value="MainCommand" />
+      <xs:enumeration value="SplitCommand" />
+      <xs:enumeration value="CommandNoText" />
+      <xs:enumeration value="CommandIcoText" />
+      <xs:enumeration value="Tight" />
+      <xs:enumeration value="Special" />
+      <xs:enumeration value="Important" />
+      <xs:enumeration value="MainGroup" />
+      <xs:enumeration value="MenuGroup" />
+      <xs:enumeration value="FilterGroup" />
+      <xs:enumeration value="SchedulerCommand" />
+      <xs:enumeration value="SchedulerLabel" />
+      <xs:enumeration value="AllowDragging" />
+      <xs:enumeration value="AllowEditing" />
+      <xs:enumeration value="RightAlign" />
+      <xs:enumeration value="LeftAlign" />
+      <xs:enumeration value="PasswordEdit" />
+      <xs:enumeration value="PathPropertyEdit" />
+      <xs:enumeration value="PropertyGridEdit" />
+      <xs:enumeration value="CheckButtonEdit" />
+      <xs:enumeration value="ColorEdit" />
+      <xs:enumeration value="HistoryEdit" />
+      <xs:enumeration value="RichEdit" />
+      <xs:enumeration value="NoColonLabel" />
+      <xs:enumeration value="FolderEdit" />
+      <xs:enumeration value="FileEdit" />
+      <xs:enumeration value="SaveFileEdit" />
+      <xs:enumeration value="XmlEditor" />
+      <xs:enumeration value="BoldLabel" />
+      <xs:enumeration value="CenterLabel" />
+      <xs:enumeration value="RightLabel" />
+      <xs:enumeration value="WarningLabel" />
+      <xs:enumeration value="MultilineLabel" />
+      <xs:enumeration value="InfoLabel" />
+      <xs:enumeration value="TipLabel" />
+      <xs:enumeration value="HyperlinkEdit" />
+      <xs:enumeration value="EmailEdit" />
+      <xs:enumeration value="LargeFont" />
+      <xs:enumeration value="FixedWidthFont" />
+      <xs:enumeration value="BoldFont" />
+      <xs:enumeration value="WarningFont" />
+      <xs:enumeration value="TextRight" />
+      <xs:enumeration value="HorizontalSplitter" />
+      <xs:enumeration value="Info" />
+      <xs:enumeration value="Tree" />
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

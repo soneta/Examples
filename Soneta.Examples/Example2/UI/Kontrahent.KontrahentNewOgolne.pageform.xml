@@ -1,0 +1,46 @@
+﻿<?xml version="1.0"?>
+<DataForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Priority="900000" 
+          RightName="Page:KontrahentNewOgolnePage" xmlns="http://www.enova.pl/schema/form.xsd"
+  DataType="Soneta.CRM.Kontrahent,Soneta.CRM">
+  <Page Name="KontrahentNewOgolnePage" CaptionHtml="Soneta.Examples - Ogólne (ze zdjęciem)" DataContext="{DataSource}">
+    <Group CaptionHtml="Dane identyfikacyjne" LabelWidth="5">
+      <Row>
+        <Stack>
+          <Row>
+            <Field CaptionHtml="Kod" Class="LeftAlign BoldLabel" Width="24" OuterWidth="68" LabelWidth="12" EditValue="{Kod}" />
+            <Field CaptionHtml="EU VAT/NIP" Width="21.7" LabelWidth="10" EditValue="{EuVAT}" />
+          </Row>
+          <Field CaptionHtml="Nazwa" Class="BoldLabel" Width="89" Height="3" LabelWidth="12" EditValue="{NazwaFormatowana}" />
+        </Stack>
+        <Image Width="100px" Height="100px" EditValue="{new KontrahentNewOgolneExtender.Logo}" />
+      </Row>
+    </Group>
+    <Group CaptionHtml="Podmiot" LabelWidth="24">
+      <Row>
+        <Field CaptionHtml="Podatnik VAT" Width="8" OuterWidth="63.5" Class="LeftAlign" EditValue="{PodatnikVAT}" />
+        <Field CaptionHtml="Status" Width="24" LabelWidth="12" EditValue="{StatusPodmiotu}" />
+      </Row>
+      <Row>
+        <Field CaptionHtml="Rodzaj VAT dla sprzedaży" Width="24" OuterWidth="63.5" Class="LeftAlign" EditValue="{RodzajPodmiotu}" />
+        <Field CaptionHtml="VAT liczony od" Width="24" LabelWidth="12" EditValue="{VATLiczonyOd}" />
+      </Row>
+      <Row>
+        <Field CaptionHtml="Rodzaj VAT dla zakupu" Width="24" OuterWidth="63.5" Class="LeftAlign" EditValue="{RodzajPodmiotuZakup}" />
+        <Field CaptionHtml="Oddział" Width="24" LabelWidth="12" EditValue="{OddzialFirmy}" />
+      </Row>
+    </Group>
+    <Group CaptionHtml="Adres">
+      <Include DataContext="{Adres}" Source="AdresH.form.xml" />
+      <Field CaptionHtml="GLN/ILN" Width="30" LabelWidth="12" EditValue="{Adres.GLN}" />
+    </Group>
+    <Group CaptionHtml="Kontakt">
+      <Grid Width="*" Height="*" EditValue="{New KontrahentOgolneExtender.Kontakty}" IsToolbarVisible="true" EditInPlace="true" NewInPlace="true" IsReadOnly="{New KontrahentOgolneExtender.IsReadOnly}" >
+        <Field CaptionHtml="Rodzaj kontaktu" Width="19" Visibility="1" EditValue="{Rodzaj}" />
+        <Field CaptionHtml="Kontakt" Width="24" Visibility="1" EditValue="{Kontakt}" />
+        <Field CaptionHtml="Krótki opis kontaktu" Width="20" Visibility="1" EditValue="{Opis}" />
+        <Field CaptionHtml="Adres" Width="20" Visibility="1" EditValue="{AdresExt}" />
+        <Field CaptionHtml="Domyslny" Width="8" Visibility="1" EditValue="{Domyslny}" />
+      </Grid>
+    </Group>
+  </Page>
+</DataForm>

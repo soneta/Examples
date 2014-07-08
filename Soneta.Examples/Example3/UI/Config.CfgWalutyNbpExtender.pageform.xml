@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<DataForm xmlns="http://www.enova.pl/schema/form.xsd" Priority="100">
+  <Page CaptionHtml="Soneta.Examples/Ustawienia Soneta.Examples" DataContext="{new CfgWalutyNbpExtender}">
+    <Group CaptionHtml="Kursy Walut NBP">
+      <Field CaptionHtml="Import kursów walut NBP włączony" LabelWidth="30" Width="8" EditValue="{AktywneKursyNbp}"/>
+      <Field CaptionHtml="Link do pliku xml na stronie NBP" LabelWidth="30" Width="50" EditValue="{UrlNbp}" IsReadOnly="{IsReadOnlyUrlNbp}"/>
+      <Field CaptionHtml="Import kursów walut NBP włączony" LabelWidth="30" Width="8" EditValue="{AktywneKursyNbp}"/>
+    </Group>
+    <Group CaptionHtml="Towary ulubione">
+      <Field CaptionHtml="Lista towarów ulubionych włączona" LabelWidth="30" Width="8" EditValue="{AktywneTowaryWlasne}"/>
+    </Group>
+  </Page>
+</DataForm>

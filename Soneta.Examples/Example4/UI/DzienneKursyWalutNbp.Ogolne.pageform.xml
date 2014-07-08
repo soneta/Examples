@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<DataForm xmlns="http://www.enova.pl/schema/form.xsd" Priority="100">
+  <Page CaptionHtml="Kursy walut NBP" DataContext="{DataSource}">
+
+    <Group CaptionHtml="Dzienne kursy walut NBP">
+      <Grid EditValue="{KursyWalut}" Width="150" Height="20">
+        <Field CaptionHtml="Kod" Width="5" EditValue="{Kod}" />
+        <Field CaptionHtml="Nazwa" Width="50" EditValue="{Nazwa}" />
+        <Field CaptionHtml="Kurs średni" Width="10" Class="RightAlign" EditValue="{KursSredni}" />
+        <Field CaptionHtml="Przelicznik" Width="10" Class="RightAlign" EditValue="{Przelicznik}" />
+      </Grid>
+      <Row>
+        <Stack>
+          <Command CaptionHtml="Aktualizuj" MethodName="Aktualizuj"/>
+        </Stack>
+        <Stack>
+          <Command CaptionHtml="Pobierz xml" MethodName="PobierzXml"/>
+        </Stack>
+      </Row>
+    </Group>
+ </Page>
+</DataForm>

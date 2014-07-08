@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DataForm xmlns="http://www.enova.pl/schema/form.xsd" DataType="Soneta.Examples.Example5.Extender.ZmianaNazwTowarowParams,Soneta.Examples" Priority="0">
+  <Page Name="ZmianaNazwyTowarowParamsForm" CaptionHtml="Zmiana nazwy towarów" DataContext="{DataSource}">
+    <Field CaptionHtml="Typ towaru" EditValue="{TypTowaru}"/>
+    <Group CaptionHtml="Dodawania prefix/postfix" LabelWidth="15">
+      <Field CaptionHtml="Dodaj prefix" EditValue="{DodajPrefix}" Width="5"/>
+      <Field CaptionHtml="Dodaj postfix" EditValue="{DodajPostfix}" Width="5"/>
+    </Group>
+    <Group CaptionHtml="Usuwanie prefix/postfix" LabelWidth="15">
+      <Field CaptionHtml="Usuń prefix" EditValue="{UsunPrefix}" Width="5"/>
+      <Field CaptionHtml="Usuń postfix" EditValue="{UsunPostfix}" Width="5"/>
+    </Group>
+  </Page>
+</DataForm>

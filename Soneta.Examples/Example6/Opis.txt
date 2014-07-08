@@ -1,0 +1,10 @@
+﻿Example 6
+-----------------------------------------------------------------------------------------------------
+
+Przykład pokazuje możliwość podpięcia workera dla typu Kontrahent z własnymi czynnościami.
+
+W wyniku zastosowania dodatku, w menu czynności na liście kontrahentów powinna pojawić się dodatkowa 
+sekcja o nazwie Soneta.Examples, która zawiera 4 różne akcje zaimplementowane w przykładzie.
+
+Extender\ExampleWorker.cs					- przykładowan klasa extender'a implementująca czynności
+											  z zastosowaniem różnych rezultatów.
