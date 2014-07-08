@@ -1,4 +1,4 @@
-﻿Example 2
+﻿###Example 2###
 -----------------------------------------------------------------------------------------------------
 
 Przykład pokazuje możliwość podpięcia dodatkowej zakładki użytkownika dla kontrahenta.
@@ -11,6 +11,7 @@ W wyniku zastosowania dodatku, powinna pojawić się dodatkowa zakładka na form
 kontrahenta, któa oprócz danych standardowych zakładki ogólnej będzie posiadała również
 logo kontrahenta.
 
-Extender\KontrahentNewOgolneExtender				- przykładowan klasa implementująca property Logo, 
-													  które zostało umieszczone na dodatkowej zakładce
-UI\Kontrahent.KontrahentNewOgolne.pageform.xml		- definicja dodatkowej zakładki
+* Extender\KontrahentNewOgolneExtender
+Przykładowan klasa implementująca property Logo, które zostało umieszczone na dodatkowej zakładce
+* UI\Kontrahent.KontrahentNewOgolne.pageform.xml
+Definicja dodatkowej zakładki
