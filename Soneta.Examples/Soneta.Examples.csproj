@@ -103,13 +103,13 @@
     <EmbeddedResource Include="Example4\UI\DzienneKursyWalutNbp.Ogolne.pageform.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Example2\Opis.txt" />
-    <Content Include="Example3\Opis.txt" />
-    <Content Include="Example4\Opis.txt" />
-    <Content Include="Example5\Opis.txt" />
+    <None Include="Example2\README.md" />
+    <None Include="Example3\README.md" />
+    <None Include="Example4\README.md" />
+    <None Include="Example5\README.md" />
     <EmbeddedResource Include="Example5\UI\ZmianaNazwTowarowParams.Ogolne.pageform.xml" />
-    <Content Include="Example6\Opis.txt" />
-    <Content Include="Example1\Opis.txt" />
+    <None Include="Example6\README.md" />
+    <None Include="Example1\README.md" />
     <EmbeddedResource Include="Example1\UI\TowaryUlubioneKontaktu.viewform.xml" />
     <EmbeddedResource Include="Utils\examples.ico" />
   </ItemGroup>
