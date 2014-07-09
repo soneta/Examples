@@ -6,7 +6,7 @@ Prezentowany dodatek o nazwie *Soneta.Examples* zawiera przykłady zastosowania 
 
 * ***Example1*** 
 
-    Przykład pokazuje możliwość zastosowania własnej listy w oparciu o istniejące obiekty enova. Zawiera zdefiniowane własne    View, z którym została powiązana odpowiednia definicja w postaci struktury pageform.xml. 
+    Przykład pokazuje możliwość zastosowania własnej listy w oparciu o istniejące obiekty enova. Zawiera zdefiniowane własne    View, z którym została powiązana odpowiednia definicja w postaci struktury viewform.xml. 
     
     W wyniku zastosowania dodatku, powinna pojawić się dodatkowa grupa w menu głównym programu o nazwie *Soneta.Examples* z opcją *"Towary własne"*, po wybraniu której pojawi się zaimplementowana lista.
 
@@ -35,8 +35,8 @@ bez stosowania pliku *config.xml*.
 * ***Example4*** 
 
     Przykład pokazuje implementacje własnej klasy, nie powiązanej z logiką enova365. Dla zaimplementowanej 
-klasy została utworzona dedykowana definicja formularza. W przykładzie pokazano możliwość dodania tzw.
-przycisków oraz podpięcia do nich własnych metod. 
+klasy została utworzona dedykowana definicja formularza. W przykładzie pokazano wykorzystanie *Command* 
+oraz podpięcia do nich własnych metod. 
 
     W wyniku zastosowania dodatku, powinna pojawić się dodatkowa grupa w menu głównym programu o nazwie 
 *Soneta.Examples*, z opcją *"Kursy walut NBP"*, po wybraniu której pojawi się zaimplementowana lista.
@@ -48,7 +48,7 @@ dane przygotowane po stronie serwera. Dla prawidłowego działania metod koniecz
 
 * ***Example5*** 
 
-    Przykład pokazuje możliwość definiowania page'a dla parametrów zarejestrowanego workera.
+    Przykład pokazuje możliwość definiowania pageform dla parametrów zarejestrowanego workera.
 
     W wyniku zastosowania dodatku, w menu czynności na liście towarów powinna pojawić się dodatkowa 
 sekcja o nazwie *Soneta.Examples*, która zawiera akcje o nazwie *"Zmiana postfix/prefix"* zaimplementowaną 
