@@ -1,7 +1,7 @@
-###Example 5###
+﻿###Example 5###
 -----------------------------------------------------------------------------------------------------
 
-Przykład pokazuje możliwość definiowania page'a dla parametrów zarejestrowanego workera.
+Przykład pokazuje możliwość definiowania pageform dla parametrów zarejestrowanego workera.
 
 W wyniku zastosowania dodatku, w menu czynności na liście towarów powinna pojawić się dodatkowa 
 sekcja o nazwie *Soneta.Examples*, która zawiera akcje o nazwie *"Zmiana postfix/prefix"* zaimplementowaną 
