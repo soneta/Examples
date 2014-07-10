@@ -1,10 +1,15 @@
-﻿using Soneta.Business;
+﻿#define EXAMPLE6
+
+using Soneta.Business;
 using Soneta.Business.UI;
 using Soneta.CRM;
 using Soneta.Examples.Example6.Extender;
 using Soneta.Types;
 
+#if EXAMPLE6
 [assembly: Worker(typeof(ExampleWorker), typeof(Kontrahent))]
+#endif
+
 namespace Soneta.Examples.Example6.Extender {
 
     public class ExampleWorker {

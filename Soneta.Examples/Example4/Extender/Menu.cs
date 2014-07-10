@@ -1,5 +1,9 @@
-﻿using Soneta.Business.UI;
+﻿#define EXAMPLE4
+
+using Soneta.Business.UI;
 using Soneta.Examples.Example4.Extender;
+
+#if EXAMPLE4
 
 [assembly: FolderView("Soneta.Examples/Kursy walut NBP",
     Priority = 12,
@@ -9,3 +13,5 @@ using Soneta.Examples.Example4.Extender;
     ReadOnlySession = false,
     ConfigSession = false
 )]
+
+#endif

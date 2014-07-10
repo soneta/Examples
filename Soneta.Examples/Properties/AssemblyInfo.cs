@@ -37,5 +37,8 @@ using Soneta.Examples.Utils;
 
 
 // STEP 1
+// Wersja jest ważna ponieważ zgodnie z jej numerem w cache przechowywane są
+// odczytane definicje formularzy (pageform, viewform). Pozostawienie jednego 
+// numeru spowoduje, że podczas uruchamiania zsotaną wczytane stare definicje
+// mimo, że w bibliotece będą ze zmienioną zawartością.
 [assembly: AssemblyVersion(Tools.Version + ".*")]
-//[assembly: AssemblyFileVersion(Tools.Version + ".0")]

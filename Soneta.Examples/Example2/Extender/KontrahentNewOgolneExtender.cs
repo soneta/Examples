@@ -1,4 +1,6 @@
-﻿using System;
+﻿#define EXAMPLE2
+
+using System;
 using System.Drawing;
 using Soneta.Business;
 using Soneta.Business.Db;
@@ -6,8 +8,9 @@ using Soneta.CRM;
 using Soneta.Examples.Example2.Extender;
 
 // Sposób w jaki należy zarejestrować extender, który póxniej zostanie użyty w interfejsie.
+#if EXAMPLE2
 [assembly: Worker(typeof(KontrahentNewOgolneExtender))]
-
+#endif
 namespace Soneta.Examples.Example2.Extender
 {
     class KontrahentNewOgolneExtender

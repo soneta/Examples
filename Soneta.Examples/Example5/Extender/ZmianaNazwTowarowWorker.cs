@@ -1,10 +1,14 @@
-﻿using System.Linq;
+﻿#define EXAMPLE5
+
+using System.Linq;
 using Soneta.Business;
 using Soneta.Examples.Example5.Extender;
 using Soneta.Tools;
 using Soneta.Towary;
 
+#if EXAMPLE5
 [assembly: Worker(typeof(ZmianaNazwTowarowWorker), typeof(Towary))]
+#endif
 
 namespace Soneta.Examples.Example5.Extender {
 
@@ -27,7 +31,7 @@ namespace Soneta.Examples.Example5.Extender {
         }
 
         // Akcja jaka zostanie wykonana na danych w oparciu o ustawione parametry
-        [Action("Soneta Examples/Zmiana postfix/prefix", Mode = ActionMode.SingleSession | ActionMode.ConfirmSave | ActionMode.Progress)]
+        [Action("Soneta Examples/Zmiana postfix-prefix", Mode = ActionMode.SingleSession | ActionMode.ConfirmSave | ActionMode.Progress)]
         public void ZmianaNazw() {
             using (var t = @params.Session.Logout(true)) {
                 foreach (var towar in Towary.Where(towar => @params.TypTowaru == towar.Typ)) {
