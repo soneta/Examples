@@ -1,7 +1,7 @@
-﻿###Example 4###
+###Example 4###
 -----------------------------------------------------------------------------------------------------
 
-    Przykład pokazuje implementacje własnej klasy, nie powiązanej z logiką enova365. Dla zaimplementowanej 
+Przykład pokazuje implementacje własnej klasy, nie powiązanej z logiką enova365. Dla zaimplementowanej 
 klasy została utworzona dedykowana definicja formularza. W przykładzie pokazano wykorzystanie *Command* 
 oraz podpięcia do nich własnych metod. 
 

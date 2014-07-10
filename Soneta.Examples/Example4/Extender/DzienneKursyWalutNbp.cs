@@ -76,9 +76,12 @@ namespace Soneta.Examples.Example4.Extender {
 
         public MessageBoxInformation Aktualizuj()
         {
-            return new MessageBoxInformation("Aktualizowanie kursów walut w formie XML", "Czy aktualizować tabelę kursów w formie XML") {
+            return new MessageBoxInformation(Strings.Str_MsgTitle, Strings.Str_MsgText) {
                 YesHandler = () => {
+                    // Wczytujemy aktualne kursy 
                     aktualizuj(DateTime.Today);
+
+                    // Wymuszamy odświeżenie listy 
                     Context.Session.InvokeChanged();
                     return null;
                 }
@@ -93,36 +96,36 @@ namespace Soneta.Examples.Example4.Extender {
             var document = new XmlDocument();
             document.Load(reader);
             var element = document.DocumentElement;
-            if (element != null)
+            if (element == null) 
+                return;
+
+            var tabelaKursow = element.SelectSingleNode("//tabela_kursow[@typ='A']");
+
+            _kursyWalut.Clear();
+
+            if (tabelaKursow == null) 
+                return;
+
+            var pozycje = tabelaKursow.SelectNodes("pozycja");
+            if (pozycje == null)
+                return;
+
+            foreach (XmlNode pozycja in pozycje)
             {
-                var tabelaKursow = element.SelectSingleNode("//tabela_kursow[@typ='A']");
+                if (pozycja == null)
+                    continue;
 
-                _kursyWalut.Clear();
+                var przelicznik = GetNodeValue(pozycja, "przelicznik");
+                var kursSredni = GetNodeValue(pozycja, "kurs_sredni");
+                var kodWaluty = GetNodeValue(pozycja, "kod_waluty");
+                var nazwaWaluty = GetNodeValue(pozycja, "nazwa_waluty");
 
-                if (tabelaKursow == null) 
-                    return;
-
-                var pozycje = tabelaKursow.SelectNodes("pozycja");
-                if (pozycje == null)
-                    return;
-
-                foreach (XmlNode pozycja in pozycje)
-                {
-                    if (pozycja == null)
-                        continue;
-
-                    var przelicznik = GetNodeValue(pozycja, "przelicznik");
-                    var kursSredni = GetNodeValue(pozycja, "kurs_sredni");
-                    var kodWaluty = GetNodeValue(pozycja, "kod_waluty");
-                    var nazwaWaluty = GetNodeValue(pozycja, "nazwa_waluty");
-
-                    _kursyWalut.Add(kodWaluty, new KursWalutyNbp {
-                        Kod = kodWaluty,
-                        Nazwa = nazwaWaluty,
-                        Przelicznik = (przelicznik.IsNullOrEmpty() ? 0 : Convert.ToInt32(przelicznik)),
-                        KursSredni = (kursSredni.IsNullOrEmpty() ? 0 : Convert.ToDouble(kursSredni))
-                    });
-                }
+                _kursyWalut.Add(kodWaluty, new KursWalutyNbp {
+                    Kod = kodWaluty,
+                    Nazwa = nazwaWaluty,
+                    Przelicznik = (przelicznik.IsNullOrEmpty() ? 0 : Convert.ToInt32(przelicznik)),
+                    KursSredni = (kursSredni.IsNullOrEmpty() ? 0 : Convert.ToDouble(kursSredni))
+                });
             }
         }
 
@@ -164,8 +167,6 @@ namespace Soneta.Examples.Example4.Extender {
                     break;
             }
 
-            //file = String.Format("a125z{0}.xml", lastDay.ToString("yyMMdd"));
-            //var url = String.Format("http://www.nbp.pl/kursy/xml/{0}", file);
             var nbpUrl = CfgWalutyNbpExtender.GetValue(Session, "UrlNbp", "http://www.nbp.pl/kursy/xml/a125z");
             nbpUrl += "{0}";
             file = String.Format("{0}.xml", lastDay.ToString("yyMMdd"));

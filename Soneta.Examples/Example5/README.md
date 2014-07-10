@@ -1,4 +1,4 @@
-﻿###Example 5###
+###Example 5###
 -----------------------------------------------------------------------------------------------------
 
 Przykład pokazuje możliwość definiowania pageform dla parametrów zarejestrowanego workera.

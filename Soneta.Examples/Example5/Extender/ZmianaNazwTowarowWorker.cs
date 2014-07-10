@@ -13,17 +13,20 @@ namespace Soneta.Examples.Example5.Extender {
         public ZmianaNazwTowarowWorker(Context context) : base(context) {
         }
 
+        // Potrzebne dla akcji parametry
         [Context]
         public ZmianaNazwTowarowParams @params {
             get;
             set;
         }
 
+        // Potrzebne dane na których zostanie wykonana akcja
         [Context]
         public Towar[] Towary {
             get; set;
         }
 
+        // Akcja jaka zostanie wykonana na danych w oparciu o ustawione parametry
         [Action("Soneta Examples/Zmiana postfix/prefix", Mode = ActionMode.SingleSession | ActionMode.ConfirmSave | ActionMode.Progress)]
         public void ZmianaNazw() {
             using (var t = @params.Session.Logout(true)) {

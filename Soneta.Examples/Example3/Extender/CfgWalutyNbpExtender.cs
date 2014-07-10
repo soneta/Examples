@@ -2,6 +2,7 @@
 using Soneta.Config;
 using Soneta.Examples.Example3.Extender;
 
+// Rejestracja extender'a użytego na interfejsie
 [assembly: Worker(typeof(CfgWalutyNbpExtender))]
 
 namespace Soneta.Examples.Example3.Extender {

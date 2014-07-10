@@ -13,7 +13,8 @@ namespace Soneta.Examples.Example6.Extender {
         public Kontrahent Kontrahent { get; set; }
 
         [Action(@"Soneta.Examples/MessageBox YesNo", Mode = ActionMode.SingleSession, Priority = 90001)]
-        public MessageBoxInformation MsgYesNo() {
+        public MessageBoxInformation MsgYesNo()
+        {
             return new MessageBoxInformation("Wybierz coś") {
                 Text = "To jest jakaś wyświetlana informacja",
                 YesHandler = () => Kontrahent,

@@ -6,23 +6,20 @@ using Soneta.Towary;
 namespace Soneta.Examples.Example1.Extender {
 
     public class TowaryUlubioneKontaktuViewInfo : ViewInfo {
-        private Context _context;
 
         public TowaryUlubioneKontaktuViewInfo()
         {
+            // View wiążemy z odpowiednią definicją viewform.xml poprzez property ResourceName
             ResourceName = "TowaryUlubioneKontaktu";
+
+            // Inicjowanie contextu
             InitContext += TowaryWlasneViewInfo_InitContext;
+
+            // Tworzenie view zawierającego konkretne dane
             CreateView += TowaryWlasneViewInfo_CreateView;
         }
 
-        [Context(Required = true)]
-        public Context Context { get; set; }
-
-        [Context(Required = true)]
-        public Session Session { get; set; }
-
         void TowaryWlasneViewInfo_InitContext(object sender, ContextEventArgs args) {
-            _context = args.Context;
             args.Context.TryAdd(() => new WParams(args.Context));
         }
 
@@ -95,10 +92,16 @@ namespace Soneta.Examples.Example1.Extender {
             }
         }
 
+        /// <summary>
+        /// Ładowanie parametrów z kontekstu login'a
+        /// </summary>
         protected void Load() {
             SetContext(typeof(KontaktOsoba), Session.Login.Load(this, Key, "KontaktOsoba"));
         }
 
+        /// <summary>
+        /// Zapisywanie parametrów w kontekście login'a
+        /// </summary>
         protected void Save() {
             Session.Login.Save(this, Key, "KontaktOsoba");
         }

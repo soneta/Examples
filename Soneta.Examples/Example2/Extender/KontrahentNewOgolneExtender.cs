@@ -5,6 +5,7 @@ using Soneta.Business.Db;
 using Soneta.CRM;
 using Soneta.Examples.Example2.Extender;
 
+// Sposób w jaki należy zarejestrować extender, który póxniej zostanie użyty w interfejsie.
 [assembly: Worker(typeof(KontrahentNewOgolneExtender))]
 
 namespace Soneta.Examples.Example2.Extender
@@ -26,7 +27,7 @@ namespace Soneta.Examples.Example2.Extender
                 foreach (Attachment attachemnt in Kontrahent.Attachments)
                     if (attachemnt.SubType == SubTypeType.Picture
                         && attachemnt.Name.StartsWith("logo.", StringComparison.CurrentCultureIgnoreCase))
-                        // i zwracam go na zewnątrz
+                        // i zwracamy go na zewnątrz
                         return attachemnt.DataAsImage;
 
                 // lub zwracamy null
