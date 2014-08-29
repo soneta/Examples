@@ -63,4 +63,10 @@ w przykładzie.
 sekcja o nazwie Soneta.Examples, która zawiera 4 różne akcje zaimplementowane w przykładzie.
 
 
+* ***Example 7***
 
+    Przykład pokazuje tworzenie elementów dla dashboard (Pulpit użytkownika).
+
+    W wyniku zastosowania dodatku, w panelu użytkownika pojawią się dodatkowe element w dahshboard o nazwie 
+Soneta.Examples.Obroty i Soneta.Examples.Populacja. Z uwagi na zastosowanie nowych elementów w pageform.xml
+przykład będzie widoczny od wersji 10.5.
