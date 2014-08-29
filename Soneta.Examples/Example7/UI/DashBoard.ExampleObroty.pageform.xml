@@ -1,0 +1,29 @@
+﻿<?xml version="1.0"?>
+<DataForm xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://www.enova.pl/schema/form.xsd"
+          DataType="Soneta.Business.UI.Dashboard,Soneta.Business"
+          Contexts="License.All"
+          Priority="20000">
+  <Page CaptionHtml="Soneta.Examples.Obroty" DataContext="{DataSource}" Width="2" Height="2" Visibility="{new DashboardExtender.IsVisible}">
+    <Group CaptionHtml="Obroty" DataContext="{new DashboardExtender}" Class="DashboardItem">
+      <Row Class="Tight">
+        <Stack  Width="9" Class="Tight">
+          <Label CaptionHtml="{MaxObrot}" Class="LargeFont GreenFont CenterLabel" Width="*"></Label>
+          <Label CaptionHtml="Obrót Max" Class="CenterLabel" Width="*"></Label>
+        </Stack>
+        <Stack  Width="9" Class="Tight">
+          <Label CaptionHtml="{MinObrot}" Class="LargeFont RedFont CenterLabel" Width="*"></Label>
+          <Label CaptionHtml="Obrót Min" Class="CenterLabel" Width="*"></Label>
+        </Stack>
+      </Row>
+      <Row>
+        <Chart EditValue="{DaneObrot}" Type="Bar" Width="*" Height="*">
+          <Axis EditValue="{Towar}" CaptionHtml="Towar" Dimension="Enum" />
+          <Field EditValue="{Obrót}" CaptionHtml="Obrót" Aggregate="Sum" />
+          <Field EditValue="{Marża}" CaptionHtml="Marża" Aggregate="Sum" />
+        </Chart>
+      </Row>
+    </Group>
+  </Page>
+</DataForm>

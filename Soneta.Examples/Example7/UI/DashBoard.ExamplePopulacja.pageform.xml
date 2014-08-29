@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<DataForm xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://www.enova.pl/schema/form.xsd"
+          DataType="Soneta.Business.UI.Dashboard,Soneta.Business"
+          Contexts="License.All"
+          Priority="20001">
+  <Page CaptionHtml="Soneta.Examples.Populacja" DataContext="{DataSource}" Width="2" Height="2" Visibility="{new DashboardExtender.IsVisible}">
+    <Group CaptionHtml="Populacja miast" DataContext="{new DashboardExtender}" Class="DashboardItem">
+      <Row Class="Tight">
+        <Stack  Width="13" Class="Tight">
+          <Label CaptionHtml="{MaxPopulacja}" Class="LargeFont GreenFont CenterLabel" Width="*"></Label>
+          <Label CaptionHtml="Populacja Max" Class="CenterLabel" Width="*"></Label>
+        </Stack>
+        <Stack  Width="13" Class="Tight">
+          <Label CaptionHtml="{MinPopulacja}" Class="LargeFont RedFont CenterLabel" Width="*"></Label>
+          <Label CaptionHtml="Populacja Min" Class="CenterLabel" Width="*"></Label>
+        </Stack>
+      </Row>
+      <Row>
+        <Chart EditValue="{DanePopulacja}" Type="Pie" Width="*" Height="*">
+          <Axis EditValue="{Miasto}" CaptionHtml="Miasto" Dimension="Enum" />
+          <Field EditValue="{Populacja}" CaptionHtml="Populacja" />
+        </Chart>
+      </Row>
+    </Group>
+  </Page>
+</DataForm>

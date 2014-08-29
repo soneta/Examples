@@ -8,9 +8,13 @@
   <xs:element name="DataForm">
     <xs:complexType>
       <xs:choice minOccurs="1" maxOccurs="unbounded">
-        <xs:element name="Stack" type="containerElement" maxOccurs="unbounded" />
+        <xs:element name="Stack" type="stackElement" maxOccurs="unbounded" />
+        <xs:element name="Flow" type="flowElement" maxOccurs="unbounded" />
+        <xs:element name="Row" type="rowElement" maxOccurs="unbounded" />
+        <xs:element name="Bar" type="barElement" maxOccurs="unbounded" />
+        <xs:element name="Dashboard" type="dashboardElement" maxOccurs="unbounded" />
         <xs:element name="Include" type="includeElement" maxOccurs="unbounded" />
-        <xs:element name="Group" type="containerElement" maxOccurs="unbounded" />
+        <xs:element name="Group" type="groupElement" maxOccurs="unbounded" />
         <xs:element name="Page" type="pageElement" maxOccurs="unbounded" />
         <xs:element name="Grid" type="gridElement" maxOccurs="unbounded" />
         <xs:element name="Scheduler" type="schedulerElement" maxOccurs="unbounded" />
@@ -18,11 +22,7 @@
         <xs:element name="Pivot" type="pivotElement" maxOccurs="unbounded" />
         <xs:element name="Chart" type="chartElement" maxOccurs="unbounded" />
         <xs:element name="List" type="gridElement" maxOccurs="unbounded" />
-        <xs:element name="Flow" type="flowElement" maxOccurs="unbounded" />
-        <xs:element name="Row" type="containerElement" maxOccurs="unbounded" />
-        <xs:element name="Bar" type="containerElement" maxOccurs="unbounded" />
         <xs:element name="Field" type="fieldElement" maxOccurs="unbounded" />
-        <xs:element name="Image" type="uiElement" maxOccurs="unbounded" />
         <xs:element name="Label" type="uiElement" maxOccurs="unbounded" />
         <xs:element name="Data" type="dataElement" maxOccurs="unbounded" />
         <xs:element name="Gap" type="uiElement" maxOccurs="unbounded" />
@@ -49,9 +49,13 @@
       <xs:extension base="uiElement">
         <xs:sequence minOccurs="0">
           <xs:choice maxOccurs="unbounded">
-            <xs:element name="Stack" type="containerElement" maxOccurs="unbounded" />
+            <xs:element name="Stack" type="stackElement" maxOccurs="unbounded" />
+            <xs:element name="Flow" type="flowElement" maxOccurs="unbounded" />
+            <xs:element name="Row" type="rowElement" maxOccurs="unbounded" />
+            <xs:element name="Bar" type="barElement" maxOccurs="unbounded" />
+            <xs:element name="Dashboard" type="dashboardElement" maxOccurs="unbounded" />
             <xs:element name="Include" type="includeElement" maxOccurs="unbounded" />
-            <xs:element name="Group" type="containerElement" maxOccurs="unbounded" />
+            <xs:element name="Group" type="groupElement" maxOccurs="unbounded" />
             <xs:element name="Page" type="pageElement" maxOccurs="unbounded" />
             <xs:element name="Grid" type="gridElement" maxOccurs="unbounded" />
             <xs:element name="Scheduler" type="schedulerElement" maxOccurs="unbounded" />
@@ -59,11 +63,7 @@
             <xs:element name="Pivot" type="pivotElement" maxOccurs="unbounded" />
             <xs:element name="Chart" type="chartElement" maxOccurs="unbounded" />
             <xs:element name="List" type="gridElement" maxOccurs="unbounded" />
-            <xs:element name="Flow" type="flowElement" maxOccurs="unbounded" />
-            <xs:element name="Row" type="containerElement" maxOccurs="unbounded" />
-            <xs:element name="Bar" type="containerElement" maxOccurs="unbounded" />
             <xs:element name="Field" type="fieldElement" maxOccurs="unbounded" />
-            <xs:element name="Image" type="uiElement" maxOccurs="unbounded" />
             <xs:element name="Label" type="uiElement" maxOccurs="unbounded" />
             <xs:element name="Data" type="dataElement" maxOccurs="unbounded" />
             <xs:element name="Gap" type="uiElement" maxOccurs="unbounded" />
@@ -83,9 +83,13 @@
     <xs:complexContent>
       <xs:extension base="uiElement">
         <xs:choice minOccurs="1" maxOccurs="1">
-          <xs:element name="Stack" type="containerElement" maxOccurs="unbounded" />
+          <xs:element name="Stack" type="stackElement" maxOccurs="unbounded" />
+          <xs:element name="Flow" type="flowElement" maxOccurs="unbounded" />
+          <xs:element name="Row" type="rowElement" maxOccurs="unbounded" />
+          <xs:element name="Bar" type="barElement" maxOccurs="unbounded" />
+          <xs:element name="Dashboard" type="dashboardElement" maxOccurs="unbounded" />
           <xs:element name="Include" type="includeElement" maxOccurs="unbounded" />
-          <xs:element name="Group" type="containerElement" maxOccurs="unbounded" />
+          <xs:element name="Group" type="groupElement" maxOccurs="unbounded" />
           <xs:element name="Page" type="pageElement" maxOccurs="unbounded" />
           <xs:element name="Grid" type="gridElement" maxOccurs="unbounded" />
           <xs:element name="Scheduler" type="schedulerElement" maxOccurs="unbounded" />
@@ -93,11 +97,7 @@
           <xs:element name="Pivot" type="pivotElement" maxOccurs="unbounded" />
           <xs:element name="Chart" type="chartElement" maxOccurs="unbounded" />
           <xs:element name="List" type="gridElement" maxOccurs="unbounded" />
-          <xs:element name="Flow" type="flowElement" maxOccurs="unbounded" />
-          <xs:element name="Row" type="containerElement" maxOccurs="unbounded" />
-          <xs:element name="Bar" type="containerElement" maxOccurs="unbounded" />
           <xs:element name="Field" type="fieldElement" maxOccurs="unbounded" />
-          <xs:element name="Image" type="uiElement" maxOccurs="unbounded" />
           <xs:element name="Label" type="uiElement" maxOccurs="unbounded" />
           <xs:element name="Data" type="dataElement" maxOccurs="unbounded" />
           <xs:element name="Gap" type="uiElement" maxOccurs="unbounded" />
@@ -116,6 +116,41 @@
     <xs:complexContent>
       <xs:extension base="containerElement">
         <xs:attribute name="Align" type="xs:boolean" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="stackElement">
+    <xs:complexContent>
+      <xs:extension base="containerElement">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="rowElement">
+    <xs:complexContent>
+      <xs:extension base="containerElement">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="groupElement">
+    <xs:complexContent>
+      <xs:extension base="containerElement">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="barElement">
+    <xs:complexContent>
+      <xs:extension base="containerElement">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="dashboardElement">
+    <xs:complexContent>
+      <xs:extension base="containerElement">
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -147,7 +182,8 @@
         </xs:choice>-->
         <xs:attribute name="Format" type="xs:string" use="optional" />
         <xs:attribute name="CheckedValue" type="xs:string" use="optional" />
-        <xs:attribute name="Footer" type="enumColumnFooter" use="optional" />
+        <xs:attribute name="Footer" type="enumAggregationType" use="optional" />
+        <xs:attribute name="Aggregate" type="enumAggregationType" use="optional" />
         <xs:attribute name="Important" type="xs:boolean" use="optional" />
       </xs:extension>
     </xs:complexContent>
@@ -163,7 +199,7 @@
         <xs:sequence minOccurs="0">
           <xs:choice maxOccurs="unbounded">
             <xs:element name="Field" type="fieldElement" maxOccurs="unbounded" />
-            <xs:element name="Flow" type="flowElement" />
+            <xs:element name="Flow" type="flowElement" maxOccurs="unbounded" />
             <xs:element name="GroupBy" type="groupByElement" maxOccurs="unbounded" />
             <xs:element name="Axis" type="axisElement" maxOccurs="unbounded" />
           </xs:choice>
@@ -173,6 +209,7 @@
         <xs:attribute name="OrderBy" type="xs:string" use="optional" />
         <xs:attribute name="Filter" type="xs:string" use="optional" />
         <xs:attribute name="IsToolbarVisible" type="xs:boolean" use="optional" />
+        <xs:attribute name="IsDateNavigatorVisible" type="xs:boolean" use="optional" />
         <xs:attribute name="IsFilterRowVisible" type="xs:boolean" use="optional" />
         <xs:attribute name="FilterPanelWidth" type="xs:string" use="optional" />
         <xs:attribute name="VisibleFeatures" type="xs:string" use="optional" />
@@ -265,8 +302,9 @@
   <xs:complexType name="axisElement">
     <xs:complexContent>
       <xs:extension base="uiElement">
-        <xs:attribute name="Direction" type="enumPivotDirection" use="required" />
+        <xs:attribute name="Direction" type="enumPivotDirection" use="optional" />
         <xs:attribute name="Dimension" type="enumPivotDimension" use="optional" />
+        <xs:attribute name="FirstDayOfWeek" type="enumDayOfWeek" use="optional" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -344,7 +382,6 @@
       <xs:enumeration value="None" />
       <xs:enumeration value="Child" />
       <xs:enumeration value="NewFrame" />
-      <xs:enumeration value="CloseCurrent" />
       <xs:enumeration value="Popup" />
       <xs:enumeration value="ComboBox" />
       <xs:enumeration value="Modal" />
@@ -359,7 +396,7 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="enumColumnFooter">
+  <xs:simpleType name="enumAggregationType">
     <xs:restriction base="xs:string">
       <xs:enumeration value="Auto" />
       <xs:enumeration value="None" />
@@ -384,7 +421,7 @@
   <xs:simpleType name="enumDataFormValidateLanguage">
     <xs:restriction base="xs:string">
       <xs:enumeration value="None" />
-      <xs:enumeration value="Requiered" />
+      <xs:enumeration value="Required" />
       <xs:enumeration value="Manual" />
     </xs:restriction>
   </xs:simpleType>
@@ -421,6 +458,11 @@
       <xs:enumeration value="AZ" />
       <xs:enumeration value="WeekByDays" />
       <xs:enumeration value="MonthByDays" />
+      <xs:enumeration value="ByNumbers" />
+      <xs:enumeration value="ByDays" />
+      <xs:enumeration value="ByWeeks" />
+      <xs:enumeration value="ByMonths" />
+      <xs:enumeration value="ByYears" />
     </xs:restriction>
   </xs:simpleType>
 
@@ -437,7 +479,19 @@
       <xs:enumeration value="Line" />
       <xs:enumeration value="Bar" />
       <xs:enumeration value="Pie" />
-      <xs:enumeration value="Donate" />
+      <xs:enumeration value="Donut" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="enumDayOfWeek">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Sunday" />
+      <xs:enumeration value="Monday" />
+      <xs:enumeration value="Tuesday" />
+      <xs:enumeration value="Wednesday" />
+      <xs:enumeration value="Thursday" />
+      <xs:enumeration value="Friday" />
+      <xs:enumeration value="Saturday" />
     </xs:restriction>
   </xs:simpleType>
 
@@ -470,8 +524,12 @@
       <xs:enumeration value="Tight" />
       <xs:enumeration value="Special" />
       <xs:enumeration value="Important" />
+      <xs:enumeration value="LateCalculate" />
       <xs:enumeration value="MainGroup" />
       <xs:enumeration value="MenuGroup" />
+      <xs:enumeration value="CascadeMenu" />
+      <xs:enumeration value="CascadeMenuGroup" />
+      <xs:enumeration value="CascadeSubmenuGroup" />
       <xs:enumeration value="FilterGroup" />
       <xs:enumeration value="SchedulerCommand" />
       <xs:enumeration value="SchedulerLabel" />
@@ -486,11 +544,13 @@
       <xs:enumeration value="ColorEdit" />
       <xs:enumeration value="HistoryEdit" />
       <xs:enumeration value="RichEdit" />
+      <xs:enumeration value="AspxEdit" />
       <xs:enumeration value="NoColonLabel" />
       <xs:enumeration value="FolderEdit" />
       <xs:enumeration value="FileEdit" />
       <xs:enumeration value="SaveFileEdit" />
-      <xs:enumeration value="XmlEditor" />
+      <xs:enumeration value="ImageEdit" />
+      <xs:enumeration value="XmlEdit" />
       <xs:enumeration value="BoldLabel" />
       <xs:enumeration value="CenterLabel" />
       <xs:enumeration value="RightLabel" />
@@ -501,6 +561,8 @@
       <xs:enumeration value="HyperlinkEdit" />
       <xs:enumeration value="EmailEdit" />
       <xs:enumeration value="LargeFont" />
+      <xs:enumeration value="GreenFont" />
+      <xs:enumeration value="RedFont" />
       <xs:enumeration value="FixedWidthFont" />
       <xs:enumeration value="BoldFont" />
       <xs:enumeration value="WarningFont" />
@@ -508,6 +570,7 @@
       <xs:enumeration value="HorizontalSplitter" />
       <xs:enumeration value="Info" />
       <xs:enumeration value="Tree" />
+      <xs:enumeration value="DashboardItem" />
     </xs:restriction>
   </xs:simpleType>
 
