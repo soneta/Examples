@@ -85,7 +85,8 @@ namespace Soneta.Examples.Example7.Extender {
 
         public bool IsVisible {
             get {
-                return BusApplication.Instance.Is365 && CoreTools.Version.StartsWith("10.5");
+                var version = typeof (CoreTools).Assembly.GetName().Version;
+                return BusApplication.Instance.Is365 && version.Major >= 10 && version.Minor >= 5;
             }
         }
 
