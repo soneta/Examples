@@ -134,6 +134,7 @@
     <EmbeddedResource Include="Example3\UI\Config.CfgWalutyNbpExtender.pageform.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Example7\mapa.html" />
     <Content Include="Example7\UI\DashBoard.ExampleObroty.pageform.xml" />
   </ItemGroup>
   <ItemGroup>

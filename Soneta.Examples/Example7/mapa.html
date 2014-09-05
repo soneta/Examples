@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+      <style type="text/css">
+          html { height: 100% }
+          body { height: 100%; margin: 0; padding: 0 }
+          #map-canvas { width: 100%; height: 100% }
+      </style>
+
+    <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="w_tym_miejscu_nale¿y_podaæ_klucz_do_GoogleMap_API"></script>
+    <script type="text/javascript">
+      // call -> map.html?lat=50.0311935&lng=19.9401426
+      function initialize() {
+        var lat = getQueryParameter('lat', 50.0311935),
+            lng = getQueryParameter('lng', 19.9401426),
+            myLatlng = new google.maps.LatLng(lat,lng),
+            mapOptions = {
+              center: myLatlng,
+              zoom: 14,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            },
+            map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions),
+            marker = new google.maps.Marker({
+              position: myLatlng,
+              map: map,
+              title: 'Soneta Sp. z o.o., Wadowicka 8A'
+            });
+      }
+
+      function getQueryParameter(_key, _default) {
+        var regexS = "[\\?&]" + _key + "=([^&#]*)",
+            regex = new RegExp(regexS),
+            results = regex.exec(window.location),
+            result = _default;
+
+        if (results != null) {
+          result= decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+        return result;
+      };
+
+      $(document).ready(function () {
+         google.maps.event.addDomListener(window, 'load', initialize);
+      });
+
+    </script>
+  </head>
+  <body>
+    <div style="position: absolute; left: 5px; top: 5px; bottom: 5px; right: 5px;">
+       <div id="map-canvas"/>
+    </div>
+  </body>
+</html>
