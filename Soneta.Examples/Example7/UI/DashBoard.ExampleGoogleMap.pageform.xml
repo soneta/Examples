@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<DataForm xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://www.enova.pl/schema/form.xsd"
+          DataType="Soneta.Business.UI.Dashboard,Soneta.Business"
+          Contexts="License.All"
+          Priority="20002">
+  <Page CaptionHtml="Soneta.Examples.GoogleMap" DataContext="{DataSource}" Width="4" Height="2" Visibility="{new DashboardExtender.IsVisible}">
+    <Group CaptionHtml="Wizytówka" DataContext="{new DashboardExtender}" Class="DashboardItem">
+      <Row>
+        <Stack Width="*" Class="Tight">
+          <Label CaptionHtml="Soneta Sp. z o.o." Class="LargeFont GreenFont" Width="35"></Label>
+          <Label CaptionHtml="Kraków, Wadowicka 8A" Class="GreenFont" Width="25"></Label>
+          <Label CaptionHtml="Firma Soneta sp. z o.o. zajmuje się produkcją oprogramowania dla biznesu – enova365. Firmę tworzą specjaliści projektujący oprogramowanie od ponad 20 lat. Dzięki wykorzystaniu najnowszych technologii, wiedzy eksperckiej oraz kompetentnej obsłudze, firma odniosła sukces rynkowy. Soneta posiada ugruntowaną pozycję na polskim rynku oprogramowania." Height="5" Class="MultilineLabel"/>
+        </Stack>
+        <Stack Width="220px" Height="220" Class="Tight">
+          <Html CaptionHtml="" Width="*" Height="*" EditValue="{GoogleMapHtml}"/>
+        </Stack>
+      </Row>
+    </Group>
+  </Page>
+</DataForm>

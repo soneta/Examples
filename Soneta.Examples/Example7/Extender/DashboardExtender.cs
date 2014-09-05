@@ -1,5 +1,6 @@
 ﻿#define EXAMPLE7
 
+using System;
 using System.Linq;
 using Soneta.Business;
 using Soneta.Business.App;
@@ -88,6 +89,11 @@ namespace Soneta.Examples.Example7.Extender {
                 var version = typeof (CoreTools).Assembly.GetName().Version;
                 return BusApplication.Instance.Is365 && version.Major >= 10 && version.Minor >= 5;
             }
+        }
+
+        public string GoogleMapHtml
+        {
+            get { return String.Format("<iframe width='230px' height='230px' style='border: none;' sandbox='allow-scripts' src='{0}'></iframe>", "http://localhost/googlemap/mapa.html"); }
         }
 
     }

@@ -134,10 +134,13 @@
     <EmbeddedResource Include="Example3\UI\Config.CfgWalutyNbpExtender.pageform.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Example7\UI\DashBoard.ExampleObroty.pageform.xml" />
+    <Content Include="Example7\UI\DashBoard.ExampleObroty.pageform.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Example7\UI\DashBoard.ExamplePopulacja.pageform.xml" />
+    <Content Include="Example7\UI\DashBoard.ExamplePopulacja.pageform.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Example7\UI\DashBoard.ExampleGoogleMap.pageform.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
