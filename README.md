@@ -65,13 +65,15 @@ sekcja o nazwie Soneta.Examples, która zawiera 4 różne akcje zaimplementowane
 
 * ***Example 7***
 
-    Przykład pokazuje tworzenie elementów dla dashboard (Pulpit użytkownika).
-
-    W wyniku zastosowania dodatku, w panelu użytkownika pojawią się dodatkowe element w dahshboard o nazwie 
-Soneta.Examples.Obroty i Soneta.Examples.Populacja. Z uwagi na zastosowanie nowych elementów w pageform.xml
-przykład będzie działał od wersji ***10.5***.
-
+    Przykład pokazuje tworzenie elementu dashboard. W wyniku zastosowania dodatku, w panelu użytkownika pojawią się dodatkowe elementy w dahshboard o nazwie Soneta.Examples.Obroty, Soneta.Examples.Populacja i Soneta.Examples.GoogleMap. Z uwagi na zastosowanie nowych elementów w pageform.xml przykład będzie działał od wersji 10.5. 
+    
     UWAGA !!!
 
-    Dla wersji wcześniejszych niż 10.5 przed skompilowaniem dodatku w plikach Dashboard.*.xml
-należy usunąć wpisy Class="DashboardItem"
+    Aby przykład zadziałał prawidłowo w wersjach od 10.5, przed skompilowaniem dodatku należy dla plików
+Dashboard.*.xml ustawić atrybut Embedded Resource.
+
+    Element o nazwie Soneta.Examples.GoogleMap wymaga przygotowania strony html w oparciu o GoogleMap API. Przykład takiej strony html znajduje się w projekcie (Example7\mapa.html). Aby wykorzystać przykład należy wygenerować niezbędny klucz dla GoogleMap API
+
+* Extender\DashboardExetnder.cs
+
+    Przykładowa klasa extender'a implementująca dane widoczne na dashboard.
