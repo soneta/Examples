@@ -1,4 +1,4 @@
-﻿###Example 1###
+﻿###Example 1
 -----------------------------------------------------------------------------------------------------
 
 Przykład pokazuje możliwość zastosowania własnej listy w oparciu o istniejące obiekty enova. Zawiera zdefiniowane własne    View, z którym została powiązana odpowiednia definicja w postaci struktury viewform.xml. 
