@@ -1,4 +1,4 @@
-﻿###Example 2###
+﻿###Example 2
 -----------------------------------------------------------------------------------------------------
 
 Przykład pokazuje możliwość podpięcia dodatkowej zakładki użytkownika dla klasy *Kontrahent*.
