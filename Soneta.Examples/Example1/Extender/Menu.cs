@@ -13,8 +13,7 @@ using Soneta.Examples.Example1.Extender;
     Priority = 10,
     Description = "Przykłady implementacji enova365",
     BrickColor = FolderViewAttribute.BlueBrick,
-    Icon = "Soneta.Examples.Utils.examples.ico;Soneta.Examples",
-    Contexts = new object[] { LicencjeModułu.CRM }
+    Icon = "Soneta.Examples.Utils.examples.ico;Soneta.Examples"
 )]
 
 #endif
