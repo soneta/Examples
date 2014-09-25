@@ -1,4 +1,4 @@
-###Example 3###
+###Example 3
 -----------------------------------------------------------------------------------------------------
 
 Przykład pokazuje możliwość podpięcia własnej zakładki konfiguracyjnej dla potrzeb własnego dodatku.

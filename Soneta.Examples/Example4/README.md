@@ -1,4 +1,4 @@
-###Example 4###
+###Example 4
 -----------------------------------------------------------------------------------------------------
 
 Przykład pokazuje implementacje własnej klasy, nie powiązanej z logiką enova365. Dla zaimplementowanej 

@@ -1,4 +1,4 @@
-###Example 6###
+###Example 6
 -----------------------------------------------------------------------------------------------------
 
 Przykład pokazuje możliwość podpięcia workera dla typu Kontrahent z własnymi czynnościami. 
