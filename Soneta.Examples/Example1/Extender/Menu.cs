@@ -1,7 +1,6 @@
 ﻿#define EXAMPLE1
 #define START
 
-using Soneta.Business.Licence;
 using Soneta.Business.UI;
 using Soneta.Examples.Example1.Extender;
 
