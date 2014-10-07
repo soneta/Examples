@@ -79,7 +79,7 @@ Dashboard.*.xml ustawić atrybut Embedded Resource.
     Przykładowa klasa extender'a implementująca dane widoczne na dashboard.
 
 	
-* ***Example 8*
+* ***Example 8***
 
 Przykład pokazuje programistyczne możliwości kolorowania wierszy na liście. 
 
