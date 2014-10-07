@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<DataForm xmlns="http://www.enova.pl/schema/form.xsd" Priority="100">
+  <Page CaptionHtml="Notowania GPW" DataContext="{DataSource}">
+    <Group CaptionHtml="Aktualne notowania">
+      <Row>
+      <Stack Width="200" Height="*">
+        <Grid EditValue="{AktualneNotowania}" Width="150" Height="*" >
+          <Field CaptionHtml="Nazwa" Width="20" EditValue="{Nazwa}" />
+          <Field CaptionHtml="Kurs" Width="15" EditValue="{Kurs}" />
+          <Field CaptionHtml="Zmiana" Width="15" EditValue="{Zmiana}" />
+          <Field CaptionHtml="Liczba transakcji" Width="15" EditValue="{LiczbaTransakcji}" />
+        </Grid>
+      </Stack>
+      </Row>
+    </Group>
+ </Page>
+</DataForm>

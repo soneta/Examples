@@ -20,7 +20,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\Program Files %28x86%29\Common Files\Soneta\Assemblies\</OutputPath>
+    <OutputPath>..\..\..\Program Files %2528x86%2529\Common Files\Soneta\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -94,6 +94,9 @@
     </Compile>
     <Compile Include="Example1\Extender\Menu.cs" />
     <Compile Include="Example7\Extender\DashboardExtender.cs" />
+    <Compile Include="Example8\Extender\Notowania.cs" />
+    <Compile Include="Example8\Extender\Akcja.cs" />
+    <Compile Include="Example8\Extender\Menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -104,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Example7\README.md" />
+    <None Include="Example8\README.md" />
     <None Include="Schema\Form.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -139,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Example7\mapa.html" />
+    <EmbeddedResource Include="Example8\UI\Notowania.Ogolne.pageform.xml" />
     <EmbeddedResource Include="Example7\UI\DashBoard.ExampleObroty.pageform.xml" />
   </ItemGroup>
   <ItemGroup>
