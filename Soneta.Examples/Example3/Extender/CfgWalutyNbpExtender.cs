@@ -18,7 +18,7 @@ namespace Soneta.Examples.Example3.Extender {
         #region Property formularza
 
         public string UrlNbp {
-            get { return GetValue("UrlNbp", "http://www.nbp.pl/kursy/xml"); }
+            get { return GetValue("UrlNbp", ""); }
             set { SetValue("UrlNbp", value, AttributeType._string); }
         }
 

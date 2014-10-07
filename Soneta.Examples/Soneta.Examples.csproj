@@ -80,7 +80,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Example4\Extender\DzienneKursyWalutNbp.cs" />
+    <Compile Include="Example4\Extender\DzienneKursyWalutNbp.Pobranie.cs" />
+    <Compile Include="Example4\Extender\DzienneKursyWalutNbp.Aktualizacja.cs" />
+    <Compile Include="Example4\Extender\DzienneKursyWalutNbp.Ogolne.cs" />
     <Compile Include="Example4\Extender\KursWalutyNbp.cs" />
     <Compile Include="Example2\Extender\KontrahentNewOgolneExtender.cs" />
     <Compile Include="Example3\Extender\CfgWalutyNbpExtender.cs" />
@@ -131,17 +133,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Example3\UI\Config.CfgWalutyNbpExtender.pageform.xml" />
+    <EmbeddedResource Include="Example3\UI\Config.CfgWalutyNbpExtender.pageform.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Example7\mapa.html" />
-    <Content Include="Example7\UI\DashBoard.ExampleObroty.pageform.xml" />
+    <EmbeddedResource Include="Example7\UI\DashBoard.ExampleObroty.pageform.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Example7\UI\DashBoard.ExamplePopulacja.pageform.xml" />
+    <EmbeddedResource Include="Example7\UI\DashBoard.ExamplePopulacja.pageform.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Example7\UI\DashBoard.ExampleGoogleMap.pageform.xml" />
+    <EmbeddedResource Include="Example7\UI\DashBoard.ExampleGoogleMap.pageform.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
