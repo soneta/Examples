@@ -43,6 +43,15 @@ namespace Soneta.Examples.Example5.Extender {
                     if (!@params.DodajPostfix.IsNullOrEmpty() && !towar.Nazwa.StartsWith(@params.DodajPostfix)) {
                         towar.Nazwa = towar.Nazwa + @params.DodajPostfix;
                     }
+
+                    if (!@params.UsunPrefix.IsNullOrEmpty() && towar.Nazwa.StartsWith(@params.UsunPrefix)) {
+                        towar.Nazwa = towar.Nazwa.Substring(@params.UsunPrefix.Length);
+                    }
+
+                    if (!@params.UsunPostfix.IsNullOrEmpty() && towar.Nazwa.EndsWith(@params.UsunPostfix)) {
+                        towar.Nazwa = towar.Nazwa.Substring(0, towar.Nazwa.Length - @params.UsunPostfix.Length);
+                    }
+
                 }
                 t.Commit();
             }
