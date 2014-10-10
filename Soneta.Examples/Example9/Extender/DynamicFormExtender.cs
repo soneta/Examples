@@ -1,7 +1,6 @@
 ﻿#define EXAMPLE9
 
 using System;
-using Soneta.Business;
 using Soneta.Business.UI;
 using Soneta.Examples.Example9.Extender;
 
@@ -51,8 +50,10 @@ namespace Soneta.Examples.Example9.Extender {
 
         }
 
-        public MessageBoxInformation ShowFieldValue() {
-            return new MessageBoxInformation("Aktualne wartości") {
+        public MessageBoxInformation ShowFieldValue()
+        {
+            return new MessageBoxInformation("Aktualne wartości")
+            {
                 Text = String.Format("Pole1 = {0}, Pole2 = {1}, Pole3 = {2}", Field1, Field2, Field3)
             };
         }
