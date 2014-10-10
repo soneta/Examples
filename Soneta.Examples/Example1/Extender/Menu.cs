@@ -1,18 +1,20 @@
-﻿#define EXAMPLE1
-#define START
+﻿#define OKNO_GLOWNE
+#define EXAMPLE1
 
+using Soneta.Business.Licence;
 using Soneta.Business.UI;
 using Soneta.Examples.Example1.Extender;
 
 
 
-#if START
+#if OKNO_GLOWNE
 
 [assembly: FolderView("Soneta.Examples",
     Priority = 10,
     Description = "Przykłady implementacji enova365",
     BrickColor = FolderViewAttribute.BlueBrick,
-    Icon = "Soneta.Examples.Utils.examples.ico;Soneta.Examples"
+    Icon = "Soneta.Examples.Utils.examples.ico;Soneta.Examples",
+    Contexts = new object[] { LicencjeModułu.All }
 )]
 
 #endif

@@ -29,7 +29,7 @@ namespace Soneta.Examples.Example2.Extender
                 // Wyszukujemy w załącznikach pierwszy o typie obraz, którego nazwa zaczyna się od "logo."
                 foreach (Attachment attachemnt in Kontrahent.Attachments)
                     if (attachemnt.SubType == SubTypeType.Picture
-                        && attachemnt.Name.StartsWith("logo.", StringComparison.CurrentCultureIgnoreCase))
+                        && attachemnt.IsDefault)
                         // i zwracamy go na zewnątrz
                         return attachemnt.DataAsImage;
 

@@ -143,6 +143,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Example2\UI\Kontrahent.KontrahentNewOgolne.pageform.en.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <Content Include="Example7\mapa.html" />
     <EmbeddedResource Include="Example8\UI\Notowania.Ogolne.pageform.xml" />
     <EmbeddedResource Include="Example7\UI\DashBoard.ExampleObroty.pageform.xml" />

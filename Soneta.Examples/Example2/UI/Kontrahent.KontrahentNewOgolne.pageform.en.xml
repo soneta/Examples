@@ -1,0 +1,31 @@
+﻿<?xml version="1.0"?>
+<DataForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.enova.pl/schema/form.xsd"
+    RightName="Page:KontrahentNewOgolnePage"
+    DataType="Soneta.CRM.Kontrahent,Soneta.CRM"
+    Priority="900000">
+  <Page Name="KontrahentNewOgolnePage" CaptionHtml="Soneta.Examples - General (with picture)" DataContext="{DataSource}">
+    <Group CaptionHtml="Identification data" LabelWidth="5">
+      <Row>
+        <Stack>
+          <Row>
+            <Field CaptionHtml="Code" Class="LeftAlign BoldLabel" Width="24" OuterWidth="68" LabelWidth="12" EditValue="{Kod}" />
+            <Field CaptionHtml="EU VAT/NIP" Width="21.7" LabelWidth="10" EditValue="{EuVAT}" />
+          </Row>
+          <Field CaptionHtml="Name" Class="BoldLabel" Width="89" Height="3" LabelWidth="12" EditValue="{NazwaFormatowana}" />
+        </Stack>
+        <Field Width="100px" Height="100px" EditValue="{new KontrahentNewOgolneExtender.Logo}" Class="ImageEdit"/>
+      </Row>
+    </Group>
+    <Group CaptionHtml="Contact">
+      <Grid Width="*" Height="*" EditValue="{New KontrahentOgolneExtender.Kontakty}" IsToolbarVisible="true" EditInPlace="true" NewInPlace="true" IsReadOnly="{New KontrahentOgolneExtender.IsReadOnly}" >
+        <Field CaptionHtml="Contact Type" Width="19" Visibility="1" EditValue="{Rodzaj}" />
+        <Field CaptionHtml="Contact" Width="24" Visibility="1" EditValue="{Kontakt}" />
+        <Field CaptionHtml="Short description" Width="20" Visibility="1" EditValue="{Opis}" />
+        <Field CaptionHtml="Address" Width="20" Visibility="1" EditValue="{AdresExt}" />
+        <Field CaptionHtml="Default" Width="8" Visibility="1" EditValue="{Domyslny}" />
+      </Grid>
+    </Group>
+  </Page>
+</DataForm>

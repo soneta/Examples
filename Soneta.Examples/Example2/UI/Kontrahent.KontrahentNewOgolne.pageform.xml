@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0"?>
-<DataForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Priority="900000" 
+<DataForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Priority="900000"
           RightName="Page:KontrahentNewOgolnePage" xmlns="http://www.enova.pl/schema/form.xsd"
   DataType="Soneta.CRM.Kontrahent,Soneta.CRM">
   <Page Name="KontrahentNewOgolnePage" CaptionHtml="Soneta.Examples - Ogólne (ze zdjęciem)" DataContext="{DataSource}">
@@ -12,7 +12,7 @@
           </Row>
           <Field CaptionHtml="Nazwa" Class="BoldLabel" Width="89" Height="3" LabelWidth="12" EditValue="{NazwaFormatowana}" />
         </Stack>
-        <Image Width="100px" Height="100px" EditValue="{new KontrahentNewOgolneExtender.Logo}" />
+        <Field Width="100px" Height="100px" EditValue="{new KontrahentNewOgolneExtender.Logo}" Class="ImageEdit"/>
       </Row>
     </Group>
     <Group CaptionHtml="Podmiot" LabelWidth="24">
