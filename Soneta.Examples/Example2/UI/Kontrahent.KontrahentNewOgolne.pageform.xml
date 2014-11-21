@@ -10,9 +10,9 @@
             <Field CaptionHtml="Kod" Class="LeftAlign BoldLabel" Width="24" OuterWidth="68" LabelWidth="12" EditValue="{Kod}" />
             <Field CaptionHtml="EU VAT/NIP" Width="21.7" LabelWidth="10" EditValue="{EuVAT}" />
           </Row>
-          <Field CaptionHtml="Nazwa" Class="BoldLabel" Width="89" Height="3" LabelWidth="12" EditValue="{NazwaFormatowana}" />
+          <Field CaptionHtml="Nazwa" Class="BoldLabel" Width="*" Height="3" LabelWidth="12" EditValue="{NazwaFormatowana}" />
         </Stack>
-        <Field Width="100px" Height="100px" EditValue="{new KontrahentNewOgolneExtender.Logo}" Class="ImageEdit"/>
+        <Field CaptionHtml="" Width="100px" Height="100px" EditValue="{new KontrahentNewOgolneExtender.Logo}" Class="ImageEdit"/>
       </Row>
     </Group>
     <Group CaptionHtml="Podmiot" LabelWidth="24">
