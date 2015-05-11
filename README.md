@@ -95,6 +95,6 @@ dynamiczną wartość formularza zależną od specyficznych warunków.
 
 * ***Example 10***
 
-	Przykład pokazuje możliwość zdalnej wymiany danych przy wykorzystaniu zaimplementowanego w enova365 serwisu WCF. 		Przykład zawiera implementacje serwisu enova, którego metody zostaną udostępnione przez serwis WCF co umożliwi 		wymianę danych z dowolnej maszyny w sieci. Przykadowy serwis zawiera prostą implementaję importu i eksportu cennika.
+	Przykład pokazuje możliwość zdalnej wymiany danych przy wykorzystaniu zaimplementowanego w enova365 serwisu WCF. 		Przykład zawiera implementacje serwisu enova, którego metody zostaną udostępnione przez serwis WCF co umożliwi 		wymianę danych z dowolnej maszyny w sieci. Przykładowy serwis zawiera prostą implementację importu i eksportu cennika.
    
 	W ramach interfejsu użytkownika zarejestrowanie takiego serwisu nie powoduje pojawienia się żadnej grupy w menu głównym programu.
