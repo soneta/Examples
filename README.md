@@ -91,6 +91,24 @@ Dashboard.*.xml ustawić atrybut Embedded Resource.
   
     Przykładowa klasa implementująca metody odpowiedzialne za kolorowanie wiersza.
 
+* ***Example 9***
+
+	Przykład pokazuje implementacje własnej klasy, pozwalającej na dynamiczne uzupełnienie zawartości 
+formularza. Dla zaimplementowanej klasy została utworzona dedykowana definicja formularza. 
+	W przykładzie pokazano wykorzystanie elementu *Include* zasilanego kontentem przez metodę zwracającą
+dynamiczną wartość formularza zależną od specyficznych warunków. 
+
+	W wyniku zastosowania dodatku, powinna pojawić się dodatkowa grupa w menu głównym programu o nazwie 
+	*Soneta.Examples*, z opcją *"Formularz dynamiczny"*, po wybraniu której pojawi się formularz utworzony
+	za pośrednictwem kodu programu.
+
+* Extender\DynamicFormExtender.cs
+
+    Przykładowan klasa implementująca dane oraz metody
+* Extender\DynamicFormExtender.Ogolne.pageform.xml
+
+    Definicja własnej zakładki powiązanej z własnyą klasą
+
 * ***Example 10***
 
 	Przykład pokazuje możliwość zdalnej wymiany danych przy wykorzystaniu zaimplementowanego w enova365 serwisu WCF. 		Przykład zawiera implementacje serwisu enova, którego metody zostaną udostępnione przez serwis WCF co umożliwi 	wymianę danych z dowolnej maszyny w sieci. Przykladowy serwis zawiera prosta implementaję importu i eksportu cennika.
