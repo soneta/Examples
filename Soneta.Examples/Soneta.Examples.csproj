@@ -81,6 +81,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Example10\Extender\CennikSerwis.EksportujCennik.cs" />
+    <Compile Include="Example10\Extender\CennikSerwis.ImportujCennik.cs" />
+    <Compile Include="Example10\Extender\CennikSerwis.cs" />
+    <Compile Include="Example10\Extender\ICennikSerwis.cs" />
     <Compile Include="Example4\Extender\DzienneKursyWalutNbp.Pobranie.cs" />
     <Compile Include="Example4\Extender\DzienneKursyWalutNbp.Aktualizacja.cs" />
     <Compile Include="Example4\Extender\DzienneKursyWalutNbp.Ogolne.cs" />
@@ -108,6 +112,7 @@
     <Compile Include="Utils\Tools.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Example10\README.md" />
     <None Include="Example7\README.md" />
     <None Include="Example8\README.md" />
     <None Include="Example9\README.md" />
