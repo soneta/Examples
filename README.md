@@ -74,11 +74,6 @@ Dashboard.*.xml ustawić atrybut Embedded Resource.
 
     Element o nazwie Soneta.Examples.GoogleMap wymaga przygotowania strony html w oparciu o GoogleMap API. Przykład takiej strony html znajduje się w projekcie (Example7\mapa.html). Aby wykorzystać przykład należy wygenerować niezbędny klucz dla GoogleMap API
 
-* Extender\DashboardExetnder.cs
-
-    Przykładowa klasa extender'a implementująca dane widoczne na dashboard.
-
-	
 * ***Example 8***
   
     Przykład pokazuje programistyczne możliwości kolorowania wierszy na liście. 
@@ -87,10 +82,6 @@ Dashboard.*.xml ustawić atrybut Embedded Resource.
   
     Obiekt DataAppearance zwracany przez metodę GetAppearance() pozwala ustawić takie właściwości jak kolor tła oraz kolor i styl czcionki.
   
-* Extender\Akcja.cs
-  
-    Przykładowa klasa implementująca metody odpowiedzialne za kolorowanie wiersza.
-
 * ***Example 9***
 
 	Przykład pokazuje implementacje własnej klasy, pozwalającej na dynamiczne uzupełnienie zawartości 
@@ -102,25 +93,8 @@ dynamiczną wartość formularza zależną od specyficznych warunków.
 	*Soneta.Examples*, z opcją *"Formularz dynamiczny"*, po wybraniu której pojawi się formularz utworzony
 	za pośrednictwem kodu programu.
 
-* Extender\DynamicFormExtender.cs
-
-    Przykładowan klasa implementująca dane oraz metody
-* Extender\DynamicFormExtender.Ogolne.pageform.xml
-
-    Definicja własnej zakładki powiązanej z własnyą klasą
-
 * ***Example 10***
 
-	Przykład pokazuje możliwość zdalnej wymiany danych przy wykorzystaniu zaimplementowanego w enova365 serwisu WCF. 		Przykład zawiera implementacje serwisu enova, którego metody zostaną udostępnione przez serwis WCF co umożliwi 	wymianę danych z dowolnej maszyny w sieci. Przykladowy serwis zawiera prosta implementaję importu i eksportu cennika.
+	Przykład pokazuje możliwość zdalnej wymiany danych przy wykorzystaniu zaimplementowanego w enova365 serwisu WCF. 		Przykład zawiera implementacje serwisu enova, którego metody zostaną udostępnione przez serwis WCF co umożliwi 		wymianę danych z dowolnej maszyny w sieci. Przykladowy serwis zawiera prosta implementaję importu i eksportu cennika.
    
 	W ramach interfejsu użytkownika zarejestrowanie takiego serwiu nie powoduje pojawienia się żadnej grupy w menu głównym programu.
-
-* Extender\CennikSerwis.cs
-
-    Definicja klasy serwisu oraz jego rejestracja.
-* Extender\CennikSerwis.ImportujCennik.cs
-
-    Zawiera definicje metody importującej cennik 
-* Extender\CennikSerwis.EksportujCennik.cs
-
-    Zawiera definicje metody eksportującej cennik 
