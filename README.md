@@ -5,6 +5,7 @@ Prezentowany dodatek o nazwie *Soneta.Examples* zawiera przykłady zastosowania 
 *Soneta.Examples* jest projektem dodatku, w ramach którego zostały zaimplementowane przykłady pogrupowane w folderach projektu:
 
 * ***Example1*** 
+-----------------------------------------------------------------------------------------------------
 
     Przykład pokazuje możliwość zastosowania własnej listy w oparciu o istniejące obiekty enova. Zawiera zdefiniowane własne    View, z którym została powiązana odpowiednia definicja w postaci struktury viewform.xml. 
     
