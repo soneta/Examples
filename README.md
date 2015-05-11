@@ -93,9 +93,9 @@ Dashboard.*.xml ustawić atrybut Embedded Resource.
 
 * ***Example 10***
 
-	Przykład pokazuje możliwość zdalnej wymiany danych przy wykorzystaniu zaimplementowanego w enova365 serwisu WCF. 		Przykład zawiera implementacje serwisu enova, którego metody zostaną udostępnione przez serwis WCF co umożliwi wymianę danych z dowolnej maszyny w sieci. Przykladowy serwis zawiera prosta implementaję importu i eksportu cennika.
+	Przykład pokazuje możliwość zdalnej wymiany danych przy wykorzystaniu zaimplementowanego w enova365 serwisu WCF. 		Przykład zawiera implementacje serwisu enova, którego metody zostaną udostępnione przez serwis WCF co umożliwi 	wymianę danych z dowolnej maszyny w sieci. Przykladowy serwis zawiera prosta implementaję importu i eksportu cennika.
    
-W ramach interfejsu użytkownika zarejestrowanie takiego serwiu nie powoduje pojawienia się żadnej grupy w menu głównym programu.
+	W ramach interfejsu użytkownika zarejestrowanie takiego serwiu nie powoduje pojawienia się żadnej grupy w menu głównym programu.
 
 * Extender\CennikSerwis.cs
 
