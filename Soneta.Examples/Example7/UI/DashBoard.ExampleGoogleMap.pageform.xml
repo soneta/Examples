@@ -5,8 +5,8 @@
           DataType="Soneta.Business.UI.Dashboard,Soneta.Business"
           Contexts="License.All"
           Priority="20002">
-  <Page CaptionHtml="Soneta.Examples.GoogleMap" DataContext="{DataSource}" Width="4" Height="2" Visibility="{new DashboardExtender.IsVisible}">
-    <Group CaptionHtml="Wizytówka" DataContext="{new DashboardExtender}" Class="DashboardItem">
+  <Page CaptionHtml="Soneta.Examples.GoogleMap" DataContext="{DataSource}" Width="4" Height="2">
+    <Group CaptionHtml="Wizytówka" DataContext="{new New_DashboardExtender}" Class="DashboardItem">
       <Row>
         <Stack Width="*" Class="Tight">
           <Label CaptionHtml="Soneta Sp. z o.o." Class="LargeFont GreenFont" Width="35"></Label>

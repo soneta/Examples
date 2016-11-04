@@ -8,12 +8,13 @@ using Soneta.Examples.Example7.Extender;
 using Soneta.Tools;
 
 #if EXAMPLE7
-[assembly: Worker(typeof(DashboardExtender))]
+[assembly: Worker(typeof(New_DashboardExtender))]
 #endif
 
 namespace Soneta.Examples.Example7.Extender {
 
-    public class DashboardExtender {
+    public class New_DashboardExtender
+    {
         public int LiczbaDodatnia
         {
             get { return 12; }
@@ -82,13 +83,6 @@ namespace Soneta.Examples.Example7.Extender {
                 new WierszPopulacja{ Miasto="Szczecin", Populacja=408 },
                 new WierszPopulacja{ Miasto="Wrocław", Populacja=631 }
 			};
-        }
-
-        public bool IsVisible {
-            get {
-                var version = typeof (CoreTools).Assembly.GetName().Version;
-                return BusApplication.Instance.Is365 && version.Major >= 10 && version.Minor >= 5;
-            }
         }
 
         public string GoogleMapHtml

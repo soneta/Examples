@@ -5,8 +5,8 @@
           DataType="Soneta.Business.UI.Dashboard,Soneta.Business"
           Contexts="License.All"
           Priority="20000">
-  <Page CaptionHtml="Soneta.Examples.Obroty" DataContext="{DataSource}" Width="2" Height="2" Visibility="{new DashboardExtender.IsVisible}">
-    <Group CaptionHtml="Obroty" DataContext="{new DashboardExtender}" Class="DashboardItem">
+  <Page CaptionHtml="Soneta.Examples.Obroty" DataContext="{DataSource}" Width="2" Height="2">
+    <Group CaptionHtml="Obroty" DataContext="{new New_DashboardExtender}" Class="DashboardItem">
       <Row Class="Tight">
         <Stack  Width="9" Class="Tight">
           <Label CaptionHtml="{MaxObrot}" Class="LargeFont GreenFont CenterLabel" Width="*"></Label>

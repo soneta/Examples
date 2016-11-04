@@ -5,8 +5,8 @@
           DataType="Soneta.Business.UI.Dashboard,Soneta.Business"
           Contexts="License.All"
           Priority="20001">
-  <Page CaptionHtml="Soneta.Examples.Populacja" DataContext="{DataSource}" Width="2" Height="2" Visibility="{new DashboardExtender.IsVisible}">
-    <Group CaptionHtml="Populacja miast" DataContext="{new DashboardExtender}" Class="DashboardItem">
+  <Page CaptionHtml="Soneta.Examples.Populacja" DataContext="{DataSource}" Width="2" Height="2" >
+    <Group CaptionHtml="Populacja miast" DataContext="{new New_DashboardExtender}" Class="DashboardItem">
       <Row Class="Tight">
         <Stack  Width="13" Class="Tight">
           <Label CaptionHtml="{MaxPopulacja}" Class="LargeFont GreenFont CenterLabel" Width="*"></Label>
