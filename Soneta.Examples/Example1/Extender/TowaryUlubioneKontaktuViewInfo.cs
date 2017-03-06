@@ -77,6 +77,7 @@ namespace Soneta.Examples.Example1.Extender {
 
         public WParams(Context context) : base(context)
         {
+            Load();
         }
 
         public KontaktOsoba KontaktOsoba {
