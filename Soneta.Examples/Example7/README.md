@@ -3,7 +3,7 @@
 
 Przykład pokazuje tworzenie elementu dashboard. 
 
-W wyniku zastosowania dodatku, w panelu użytkownika pojawią się dodatkowe elementy w dahshboard o nazwie 
+Do uruchomienia przykładu wymagane jest posiadanie licencji na pulpity pracownika oraz pulpity kierownika. Należy zalogować się jako Pracownik. W wyniku zastosowania dodatku, w panelu użytkownika pojawią się dodatkowe elementy w dahshboard o nazwie 
 Soneta.Examples.Obroty, Soneta.Examples.Populacja i Soneta.Examples.GoogleMap. Z uwagi na zastosowanie 
 nowych elementów w pageform.xml przykład będzie działał od wersji 10.5.
 
