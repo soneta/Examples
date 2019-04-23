@@ -70,6 +70,9 @@ ipch/
 *.vsp
 *.vspx
 
+# Visual Studio cache/options directory
+.vs/
+
 # TFS 2012 Local Workspace
 $tf/
 
@@ -185,7 +188,8 @@ FakesAssemblies/
 .LSOverride
 
 # Icon must ends with two \r.
-Icon
+Icon
+
 
 # Thumbnails
 ._*
