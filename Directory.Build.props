@@ -3,8 +3,6 @@
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
       <SonetaTargetFramework>net46</SonetaTargetFramework>
-      <SonetaPackageVersion>1905.0.0-alfa-0416-geb350f968b</SonetaPackageVersion>
-      <NUnitVersion>3.11.0</NUnitVersion>
-      <ExtensionOtput>$(ProgramFiles)\Common Files\Soneta\Assemblies\</ExtensionOtput>
+      <SonetaPackageVersion>1905.0.1-alfa-0585-g0057bf001f</SonetaPackageVersion>
   </PropertyGroup>
 </Project>

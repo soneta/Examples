@@ -2,14 +2,5 @@
 <Project Sdk="Soneta.Sdk">
   <PropertyGroup>
     <TargetFramework>$(SonetaTargetFramework)</TargetFramework>
-    <OutputPath>$(ExtensionOtput)</OutputPath>
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Soneta.Products.Modules" Version="$(SonetaPackageVersion)">
-      <IncludeAssets>compile</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Update="System.ValueTuple" Version="4.5.0" />
-  </ItemGroup>
 </Project>
