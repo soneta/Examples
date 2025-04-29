@@ -1,7 +1,9 @@
 ﻿using System;
-using System.IO;
-using System.Net;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
 using Soneta.Business;
+using Soneta.Business.App;
 using Soneta.Business.UI;
 using Soneta.Examples.Example3.Extender;
 
@@ -40,29 +42,8 @@ namespace Soneta.Examples.Example4.Extender {
             file = String.Format("{0}.xml", lastDay.ToString("yyMMdd"));
             var url = String.Format(nbpUrl, file);
 
-            var request = (HttpWebRequest)WebRequest.Create(url);
-            byte[] bytes;
-            using (var webResponse = (HttpWebResponse)request.GetResponse()) {
-                using (var sr = webResponse.GetResponseStream()) {
-
-                    bytes = new byte[(int)webResponse.ContentLength];
-                    var pos = 0;
-
-                    while (pos < bytes.Length) {
-                        if (sr == null) 
-                            continue;
-
-                        var bytesRead = sr.Read(bytes, pos, bytes.Length - pos);
-                        if (bytesRead == 0) {
-                            throw new IOException("Premature end of data");
-                        }
-                        pos += bytesRead;
-                    }
-                    if (sr != null) 
-                        sr.Close();
-                }
-                webResponse.Close();
-            }
+            using var httpClient = BusApplication.Instance.GetRequiredService<IHttpClientFactory>().CreateClient();
+            var bytes = Task.Run(() => httpClient.GetByteArrayAsync(url)).Result; 
             return bytes;
         }
 
