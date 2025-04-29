@@ -1,7 +1,7 @@
 ﻿using Soneta.Business;
 using Soneta.Examples.Example10.Extender;
 
-[assembly: Service(typeof(ICennikSerwis), typeof(CennikSerwis), Published = true)]
+[assembly: Service(typeof(ICennikSerwis), typeof(CennikSerwis), ServiceScope.Session, Published = true)]
 namespace Soneta.Examples.Example10.Extender {
 
     public partial class CennikSerwis : ICennikSerwis {
