@@ -12,10 +12,12 @@ namespace Soneta.Examples.Example10.Extender {
             string result;
             try {
                 var tcsvw = initCsvWriter();
-                using (var writer = new StringWriter()) {
-                    tcsvw.Write(writer);
-                    result = writer.ToString();
-                }
+                using var stream = new MemoryStream();
+                using var reader = new StreamReader(stream);
+                tcsvw.Write(stream);
+                stream.Flush();
+                stream.Seek(0, SeekOrigin.Begin);
+                result = reader.ReadToEnd();
             }
             catch (Exception exc) {
                 result = exc.Message;
@@ -23,24 +25,21 @@ namespace Soneta.Examples.Example10.Extender {
             return result;
         }
 
-        private SessionCsvWriter initCsvWriter() {
+        private SessionDataWriter initCsvWriter() {
             var data = initDatasource();
             var accessor = new AccessorContext {
                 Context = Context.Empty.Clone(_session),
                 MemberType = data.GetRowType()
             };
 
-            var tsvw = new SessionCsvWriter {
-                HeaderMode = CsvWriterHeaderMode.Path,
+            var tsvw = new SessionDataWriter {
+                Session = _session,
+                HeaderMode = WriterHeaderMode.Path,
+                Format = SessionDataWriterFormat.Csv,
                 DataSource = data,
-                Accessors = new List<Accessor> {
-                    accessor.GetAccessor("Kod"),
-                    accessor.GetAccessor("Ceny.Podstawowa.Netto")
-                }
+                Columns = [ new SessionDataWriter.Column(accessor.GetAccessor("Kod"), "Kod"),
+                            new SessionDataWriter.Column(accessor.GetAccessor("Ceny.Podstawowa.Netto"), "Netto") ]
             };
-
-            foreach (var acc in tsvw.Accessors)
-                acc.Prepare();
 
             return tsvw;
         }

@@ -21,11 +21,9 @@ namespace Soneta.Examples.Example8.Extender {
         }
 
         public DataAppearance GetAppearanceNazwa() {
-            var appearance = new DataAppearance();
-            if (LiczbaTransakcji > 100) {
-                appearance.SetFontStyleFromName(DataAppearance.FontStyleNames.Bold);
-            }
-            return appearance;
+            return LiczbaTransakcji > 100 
+                ? DataAppearance.FontBold
+                : DataAppearance.Empty;
         }
     }
 }

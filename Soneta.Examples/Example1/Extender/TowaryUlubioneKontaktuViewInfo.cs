@@ -97,14 +97,14 @@ namespace Soneta.Examples.Example1.Extender {
         /// Ładowanie parametrów z kontekstu login'a
         /// </summary>
         protected void Load() {
-            SetContext(typeof(KontaktOsoba), Session.Login.Load(this, Key, "KontaktOsoba"));
+            SetContext(typeof(KontaktOsoba), Context.LoadProperty(this, Key, "KontaktOsoba"));
         }
 
         /// <summary>
         /// Zapisywanie parametrów w kontekście login'a
         /// </summary>
         protected void Save() {
-            Session.Login.Save(this, Key, "KontaktOsoba");
+            Context.SaveProperty(this, Key, "KontaktOsoba");
         }
     }
 
