@@ -1,7 +1,5 @@
 ﻿#define EXAMPLE2
 
-using System;
-using System.Drawing;
 using Soneta.Business;
 using Soneta.Business.Db;
 using Soneta.CRM;
@@ -23,7 +21,7 @@ namespace Soneta.Examples.Example2.Extender
         [Context]
         public Kontrahent Kontrahent { get; set; }
 
-        public Image Logo {
+        public Drawing.Img Logo {
             get
             {
                 // Wyszukujemy w załącznikach pierwszy o typie obraz, którego nazwa zaczyna się od "logo."
@@ -31,7 +29,7 @@ namespace Soneta.Examples.Example2.Extender
                     if (attachemnt.SubType == SubTypeType.Picture
                         && attachemnt.IsDefault)
                         // i zwracamy go na zewnątrz
-                        return attachemnt.DataAsImage;
+                        return attachemnt.Image;
 
                 // lub zwracamy null
                 return null;
