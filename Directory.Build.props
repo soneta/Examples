@@ -2,7 +2,7 @@
 
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-      <SonetaTargetFramework>net46</SonetaTargetFramework>
-      <SonetaPackageVersion>2002.0.0</SonetaPackageVersion>
+      <SonetaTargetFramework>net8</SonetaTargetFramework>
+      <SonetaPackageVersion>2504.2.2</SonetaPackageVersion>
   </PropertyGroup>
 </Project>
