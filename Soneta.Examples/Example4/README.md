@@ -11,7 +11,7 @@ W wyniku zastosowania dodatku, powinna pojawić się dodatkowa grupa w menu gł�
 Na liście pokazane zostało użycie zaimplementowanej metody extender'a, która uzupełnia dane na liście.
 Druga z metod zastosowanych na definicji listy pokazuje możliwość ściągnięcia pliku xml, zawierającego
 dane przygotowane po stronie serwera. Dla prawidłowego działania metod konieczne jest uzupełnienie pola  
-*"Import kursów walut NBP włączony"* w ustawieniach enova (zakładka *Soneta.Examples*).
+*"Import kursów walut NBP włączony"* w ustawieniach systemu (zakładka *Soneta.Examples*).
 
 * Extender\CfgWalutyNbpExtender.csDzienneKursyWalutNbp.cs
 

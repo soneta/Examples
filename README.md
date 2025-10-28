@@ -6,7 +6,7 @@ Prezentowany dodatek o nazwie *Soneta.Examples* zawiera przykłady zastosowania 
 
 * ***Example1*** 
 
-    Przykład pokazuje możliwość zastosowania własnej listy w oparciu o istniejące obiekty enova. Zawiera zdefiniowane własne    View, z którym została powiązana odpowiednia definicja w postaci struktury viewform.xml. 
+    Przykład pokazuje możliwość zastosowania własnej listy w oparciu o istniejące obiekty systemu. Zawiera zdefiniowane własne    View, z którym została powiązana odpowiednia definicja w postaci struktury viewform.xml. 
     
     W wyniku zastosowania dodatku, powinna pojawić się dodatkowa grupa w menu głównym programu o nazwie *Soneta.Examples* z opcją *"Towary własne"*, po wybraniu której pojawi się zaimplementowana lista.
 
@@ -44,7 +44,7 @@ oraz podpięcia do nich własnych metod.
     Na liście pokazane zostało użycie zaimplementowanej metody extender'a, która uzupełnia dane na liście.
 Druga z metod zastosowanych na definicji listy pokazuje możliwość ściągnięcia pliku xml, zawierającego
 dane przygotowane po stronie serwera. Dla prawidłowego działania metod konieczne jest uzupełnienie pola  
-*"Import kursów walut NBP włączony"* w ustawieniach enova (zakładka *Soneta.Examples*).
+*"Import kursów walut NBP włączony"* w ustawieniach systemu (zakładka *Soneta.Examples*).
 
 * ***Example5*** 
 
@@ -95,6 +95,6 @@ dynamiczną wartość formularza zależną od specyficznych warunków.
 
 * ***Example 10***
 
-	Przykład pokazuje możliwość zdalnej wymiany danych przy wykorzystaniu zaimplementowanego w systemie serwisu WCF. 		Przykład zawiera implementacje serwisu enova, którego metody zostaną udostępnione przez serwis WCF co umożliwi 		wymianę danych z dowolnej maszyny w sieci. Przykładowy serwis zawiera prostą implementację importu i eksportu cennika.
+	Przykład pokazuje możliwość zdalnej wymiany danych przy wykorzystaniu zaimplementowanego w systemie serwisu WCF. 		Przykład zawiera implementacje serwisu, którego metody zostaną udostępnione przez serwis WCF co umożliwi 		wymianę danych z dowolnej maszyny w sieci. Przykładowy serwis zawiera prostą implementację importu i eksportu cennika.
    
 	W ramach interfejsu użytkownika zarejestrowanie takiego serwisu nie powoduje pojawienia się żadnej grupy w menu głównym programu.

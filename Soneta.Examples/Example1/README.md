@@ -7,7 +7,7 @@ W wyniku zastosowania dodatku, powinna pojawić się dodatkowa grupa w menu gł�
 
 * Extender\TowaryUlubioneKontaktuViewInfo.cs
 
-    Przykładowan klasa z implementacją View zbudowanego na bazie tabel enova.
+    Przykładowan klasa z implementacją View zbudowanego na bazie tabel.
 * Extender\Menu.cs
 
     Rejestracja listy dla View
