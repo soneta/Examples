@@ -11,7 +11,7 @@ using Soneta.Examples.Example1.Extender;
 
 [assembly: FolderView("Soneta.Examples",
     Priority = 10,
-    Description = "Przykłady implementacji enova365",
+    Description = "Przykłady implementacji Soneta",
     IconName = "lista",
     Contexts = new object[] { LicencjeModułu.All }
 )]

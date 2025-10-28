@@ -3,7 +3,7 @@
 
 Przykład pokazuje możliwość podpięcia dodatkowej zakładki użytkownika dla klasy *Kontrahent*.
 Implementacja dodatkowego extendera pokazuje w jaki sposób można dodawać własne informacje
-w postaci różnych danych (np. dodatkowe pola nie związane z logiką enova365). W przypadku 
+w postaci różnych danych (np. dodatkowe pola nie związane z logiką systemu). W przypadku 
 zakładki wprowadzone zostało dodatkowe pole wyświetlające logo kontrahenta. Aby logo
 się pojawiło konieczne jest wstawienie kontrahentowi załącznika o nazwie *logo.png*.
  

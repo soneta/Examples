@@ -11,7 +11,7 @@
         <Stack Width="*" Class="Tight">
           <Label CaptionHtml="Soneta Sp. z o.o." Class="LargeFont GreenFont" Width="35"></Label>
           <Label CaptionHtml="Kraków, Wadowicka 8A" Class="GreenFont" Width="25"></Label>
-          <Label CaptionHtml="Firma Soneta sp. z o.o. zajmuje się produkcją oprogramowania dla biznesu – enova365. Firmę tworzą specjaliści projektujący oprogramowanie od ponad 20 lat. Dzięki wykorzystaniu najnowszych technologii, wiedzy eksperckiej oraz kompetentnej obsłudze, firma odniosła sukces rynkowy. Soneta posiada ugruntowaną pozycję na polskim rynku oprogramowania." Height="5" Class="MultilineLabel"/>
+          <Label CaptionHtml="Firma Soneta sp. z o.o. zajmuje się produkcją oprogramowania dla biznesu. Firmę tworzą specjaliści projektujący oprogramowanie od ponad 20 lat. Dzięki wykorzystaniu najnowszych technologii, wiedzy eksperckiej oraz kompetentnej obsłudze, firma odniosła sukces rynkowy. Soneta posiada ugruntowaną pozycję na polskim rynku oprogramowania." Height="5" Class="MultilineLabel"/>
         </Stack>
         <Stack Width="220px" Height="220" Class="Tight">
           <Html CaptionHtml="" Width="*" Height="*" EditValue="{GoogleMapHtml}"/>
