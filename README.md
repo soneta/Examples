@@ -1,5 +1,5 @@
-###Przykłady implementacji dla enova365 - Soneta.Examples###
-Prezentowany dodatek o nazwie *Soneta.Examples* zawiera przykłady zastosowania mechanizmów tworzenia interface dla enova365. Zaimplementowane rozwiązania działają w użytkowanych przez enova365 interfejsach - *Okienkowy*, *Przeglądarkowy*, *WindowsRT*.
+###Przykłady implementacji dla systemu ERP firmy Soneta - Soneta.Examples###
+Prezentowany dodatek o nazwie *Soneta.Examples* zawiera przykłady zastosowania mechanizmów tworzenia interface dla systemu. Zaimplementowane rozwiązania działają w użytkowanych przez system interfejsach - *Okienkowy*, *Przeglądarkowy*, *WindowsRT*.
 
 
 *Soneta.Examples* jest projektem dodatku, w ramach którego zostały zaimplementowane przykłady pogrupowane w folderach projektu:
@@ -14,7 +14,7 @@ Prezentowany dodatek o nazwie *Soneta.Examples* zawiera przykłady zastosowania 
 
     Przykład pokazuje możliwość podpięcia dodatkowej zakładki użytkownika dla klasy *Kontrahent*.
 Implementacja dodatkowego extendera pokazuje w jaki sposób można dodawać własne informacje
-w postaci różnych danych (np. dodatkowe pola nie związane z logiką enova365). W przypadku 
+w postaci różnych danych (np. dodatkowe pola nie związane z logiką systemu). W przypadku 
 zakładki wprowadzone zostało dodatkowe pole wyświetlające logo kontrahenta. Aby logo
 się pojawiło konieczne jest wstawienie kontrahentowi załącznika o nazwie *logo.png*.
  
@@ -34,7 +34,7 @@ bez stosowania pliku *config.xml*.
 
 * ***Example4*** 
 
-    Przykład pokazuje implementacje własnej klasy, nie powiązanej z logiką enova365. Dla zaimplementowanej 
+    Przykład pokazuje implementacje własnej klasy, nie powiązanej z logiką systemu. Dla zaimplementowanej 
 klasy została utworzona dedykowana definicja formularza. W przykładzie pokazano wykorzystanie *Command* 
 oraz podpięcia do nich własnych metod. 
 
